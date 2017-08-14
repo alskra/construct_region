@@ -1,0 +1,15 @@
+include ../blocks/doctype/doctype
+
+block variables
+  -
+    var pageTitle = pages.about.title, pageUrls = [pages.about.url];
+
+include ../blocks/header/header
+include ../blocks/content/content
+include ../blocks/footer/footer
+
++doctype(pageTitle)
+  .-wrapper
+    +header()
+    +content()
+    +footer()

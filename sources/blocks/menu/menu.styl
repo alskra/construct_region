@@ -1,0 +1,131 @@
+.menu {
+  margin 0 (- $grid-gutter-width/2)
+
+  &__item {
+    &_submenu {
+      position relative
+
+      & > {r}__btn {
+        margin-right rem(42)
+      }
+
+      & > {r}__icon {
+        font-size rem(18)
+        line-height 1.25em
+        width rem(42)
+        padding rem(10) 0
+        background none
+        border 0
+        position absolute
+        top 0
+        right 0
+        &:before {
+          font-size rem(12)
+        }
+      }
+    }
+
+    &_current {
+      & > {r}__btn {
+        color #e62727
+      }
+
+      & > {r}__icon {
+        color #e62727
+      }
+    }
+
+    &_opened {
+      & > {r}__icon {
+        color #e62727
+        &:before {
+          transform rotate(-180deg)
+        }
+      }
+    }
+  }
+
+  &__btn {
+    display block
+    text-overflow(ellipsis)
+    font-size rem(18)
+    line-height 1.25em
+    color $black-1
+    text-decoration none
+    padding rem(10) ($grid-gutter-width/2)
+    &:hover, &:focus {
+      color #e62727
+      text-decoration none
+    }
+
+    &_lvl_2 {
+      font-size rem(16)
+      padding-left $grid-gutter-width
+    }
+  }
+
+  &__icon {
+    color $black-1
+    transition $transition-base
+    &:before {
+      display block
+      transition transform $transition-duration-base $transition-timing-function-base
+    }
+    &:hover, &:focus {
+      color #e62727
+    }
+  }
+
+  &__submenu {
+    display none
+    z-index $zindex-dropdown
+  }
+
+  @media (min-width $screen-md-min) {
+    display flex
+    flex-wrap wrap
+
+    &__item {
+      &_lvl_1 {
+
+      }
+
+      &_submenu {
+        & > {r}__btn {
+          padding-right 0
+          margin-right rem(45)
+        }
+
+        & > {r}__icon {
+          width auto
+          padding-left rem(10)
+          padding-right rem(25)
+          &:before {
+            font-size rem(10)
+          }
+        }
+      }
+    }
+
+    &__btn {
+      padding rem(10) rem(25)
+
+      &_lvl_2 {
+        padding rem(7) rem(15)
+      }
+    }
+
+    &__submenu {
+      text-align left
+      min-width 100%
+      background-color #fff
+      border 1px solid rgba(0, 0, 0, 0.15)
+      border-radius 0 0 rem(4) rem(4)
+      box-shadow 0 rem(6) rem(12) rgba(0,0,0,0.175)
+      background-clip padding-box
+      position absolute
+      top 100%
+      right 0
+    }
+  }
+}

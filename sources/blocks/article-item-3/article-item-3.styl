@@ -1,0 +1,110 @@
+.article-item-3 {
+  color white
+  background-color black
+  box-shadow 0 0 0 3px #f0f0f0
+  position relative
+  p {
+    margin 0
+  }
+
+  &__img-wrap {
+    display block
+    overflow hidden
+    position relative
+    padding-top rem(290)
+    opacity 0.32
+  }
+
+  &__img {
+    position absolute
+    top 0
+    left 0
+  }
+
+  &__content {
+    padding rem(15) rem(30)
+    position absolute
+    top 0
+    right 0
+    bottom 0
+    left 0
+  }
+
+  &__header {
+    position relative
+    padding-right rem(40)
+    margin-bottom rem(25px)
+  }
+
+  &__title {
+    color inherit
+    overflow hidden
+    font-size rem(22px)
+    font-weight 700
+    line-height 1.25em
+    text-overflow ellipsis
+    margin 0.1em 0 0.15em
+  }
+
+  &__range {
+    color #be991c
+    font-size 18px
+    font-weight 700
+    text-align center
+    line-height rem(29)
+    white-space nowrap
+    width rem(45)
+    height rem(37)
+    background inline-img('cars-point__range.png') no-repeat 0 0/contain, inline-img('cars-point__range.png') no-repeat 0 0/contain
+    position absolute
+    top rem(-2)
+    right rem(-17)
+    pointer-events none
+  }
+
+  &__rate {
+    size rem(84) rem(15)
+    background inline-img('rating-stars.png') repeat-x 0 0/auto 100%
+  }
+
+  &__product {
+    font-size rem(18)
+    margin-bottom rem(10)
+  }
+
+  &__price {
+    color $green-1
+  }
+
+  &__description {
+    overflow hidden
+    font-size rem(15)
+    line-height (20/15)em
+    max-height (20/15)em*5
+    line-clamp 5
+  }
+
+  @media (min-width $screen-sm-min) {
+    &__img-wrap {
+      padding-top percentage(250/565)
+    }
+
+    &__title {
+      font-size rem(28px)
+    }
+  }
+
+  @media (min-width $screen-md-min) {
+    &__description {
+      max-height (20/15)em*3
+      line-clamp 3
+    }
+  }
+
+  @media (min-width $screen-lg-min) {
+    &__description {
+      max-height (20/15)em*5
+      line-clamp 5
+    }
+  }
+}

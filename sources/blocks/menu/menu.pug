@@ -1,0 +1,37 @@
+-
+  var menuList = [
+    {title: pages.about.title, url: pages.about.url, submenu:
+      [
+        {title: pages.team.title, url: pages.team.url},
+        {title: pages.history.title, url: pages.history.url},
+      ]
+    },
+    {title: pages.service.title, url: pages.service.url, submenu:
+      [
+        {title: pages.tv.title, url: pages.tv.url},
+        {title: pages.radio.title, url: pages.radio.url},
+        {title: pages.ad.title, url: pages.ad.url},
+        {title: pages.press.title, url: pages.press.url},
+        {title: pages.internet.title, url: pages.internet.url},
+      ]
+    },
+    {title: pages.clients.title, url: pages.clients.url, submenu:
+      [
+        {title: pages.review.title, url: pages.review.url},
+      ]
+    },
+    {title: pages.partners.title, url: pages.partners.url},
+    {title: pages.contacts.title, url: pages.contacts.url},
+  ];
+
+mixin menu(menuList)
+  nav.-menu&attributes(attributes)
+    each itemLvl1 in menuList
+      .__item._lvl_1(class={_submenu: itemLvl1.submenu, _current: itemLvl1.url === pageUrls[0]})
+        a.__btn._lvl_1(href=itemLvl1.url)=itemLvl1.title
+        if itemLvl1.submenu
+          button.__icon._lvl_1.glyphicon.glyphicon-angle-arrow-down(type='button' data-toggle='submenu')
+          .__submenu._lvl_1
+            each itemLvl2 in itemLvl1.submenu
+              .__item._lvl_2(class={_submenu: itemLvl2.submenu, _current: itemLvl2.url === pageUrls[1]})
+                a.__btn._lvl_2(href=itemLvl2.url)=itemLvl2.title

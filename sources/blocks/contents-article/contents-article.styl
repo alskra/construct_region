@@ -1,0 +1,51 @@
+.contents-article {
+  font-size rem(14)
+  padding rem(12) rem(20)
+  background #f0f0f0
+  border-top 2px solid #cacaca
+  margin 0 0 rem(20)
+
+  &__title {
+    color #004177
+    font-size 16px
+    font-weight 700
+    text-align center
+    margin 0 0 rem(12)
+  }
+
+  &__list {
+    list-style none
+    padding 0
+    margin 0
+    line-height ($line-height-base)em
+  }
+
+  &__list-item {
+    padding 0 0 rem(10) rem(13)
+    page-break-inside avoid
+    position relative
+    &:before {
+      content: '';
+      width rem(6)
+      height rem(6)
+      background $link-color
+      transform rotate(45deg)
+      position absolute
+      top ($line-height-base/2)em
+      left rem(1)
+      margin rem(-3) 0
+    }
+  }
+
+  @media (min-width $screen-sm-min) {
+    &__list {
+      column-count 2
+      column-gap rem(50)
+    }
+  }
+
+  @media (min-width $screen-lg-min) {
+    padding-left rem(80)
+    padding-right rem(80)
+  }
+}

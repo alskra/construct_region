@@ -1,0 +1,72 @@
+.article-item {
+  p {
+    margin 0
+  }
+
+  & + & {
+    margin-top rem(20)
+    border-top 2px solid #cacaca
+    padding-top rem(20)
+  }
+
+  &__img-wrap {
+    display block
+    overflow hidden
+    max-width rem(260)
+    margin 0 auto rem(15)
+    &:hover, &:focus {
+      & ~ {r}__content {r}__title-link {
+        color $blue-1
+      }
+    }
+  }
+
+  &__img {
+    width 100%
+  }
+
+  &__content {
+
+  }
+
+  &__title {
+    color $blue-2
+    font-size rem(16)
+    font-weight 700
+    text-transform uppercase
+    text-align center
+    margin 0 0 rem(10)
+  }
+
+  &__title-link {
+    display block
+    color $blue-2
+    text-decoration none
+    &:hover, &:focus {
+      color $blue-1
+      text-decoration none
+    }
+  }
+
+  &__description {
+    margin 0 0 rem(10)
+  }
+
+  @media (min-width $screen-sm-min) {
+    display flex
+
+    &__img-wrap {
+      flex none
+      width rem(260)
+      margin 0 rem(30) 0 0
+    }
+
+    &__content {
+      flex 1 1 auto
+    }
+
+    &__title {
+      text-align left
+    }
+  }
+}

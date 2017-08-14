@@ -1,0 +1,44 @@
+.nav-box {
+  position relative
+  background $blue-1
+  margin rem(15) 0 0
+
+  &__panel {
+    display flex
+    justify-content space-between
+  }
+
+  &__toggle-menu {
+    flex none
+    color white
+    font-size rem(20)
+    line-height 1em
+    width rem(37)
+    height rem(37)
+    padding 0
+    border 0
+    background none
+
+    &.glyphicon-cancel {
+      font-size rem(18)
+    }
+  }
+
+  &__toggle-search {
+    flex none
+    color white
+    font-size rem(18)
+    line-height 1em
+    width rem(37)
+    height rem(37)
+    padding 0
+    border 0
+    background none
+  }
+
+  @media (min-width $screen-md-min) {
+    &__container {
+      display flex
+    }
+  }
+}

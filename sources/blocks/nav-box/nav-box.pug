@@ -1,0 +1,12 @@
+include ../menu/menu
+
+mixin nav-box()
+  .-nav-box&attributes(attributes)
+    .__panel.hidden-md.hidden-lg
+      button.__toggle-menu.glyphicon.glyphicon-menu-lines(type='button' data-toggle='menu')
+      button.__toggle-search.glyphicon.glyphicon-icon-search(type='button' data-toggle='search')
+    .__container.container-fluid
+      +menu(menuList)
+      .-form-search
+        input.__field(type='search' placeholder='Поиск по сайту')
+        button.__btn.glyphicon.glyphicon-icon-search.hidden-xs.hidden-sm(type='submit')

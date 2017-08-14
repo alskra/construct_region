@@ -1,0 +1,25 @@
+.reviews-options {
+  font-size rem(14)
+  text-align center
+  margin 0 rem(-15) rem(15)
+
+  &__item {
+    display inline-block
+    color $blue-2
+    margin 0 rem(15) rem(10)
+    &:hover, &:focus {
+      color $blue-1
+    }
+  }
+
+  @media (min-width $screen-sm-min) {
+    text-align right
+    margin-left 0
+    margin-right 0
+
+    &__item {
+      margin-left rem(35)
+      margin-right 0
+    }
+  }
+}

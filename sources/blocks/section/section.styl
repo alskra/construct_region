@@ -1,0 +1,26 @@
+.section {
+  &__title {
+    color $blue-2
+    font-size rem(16)
+    line-height 1.25em
+    font-weight 700
+    text-transform uppercase
+    text-align center
+    padding rem(8) rem(15) rem(6)
+    background #e4e4e4
+    margin 0 (- ($grid-gutter-width/2)) rem(25)
+  }
+
+  @media (min-width $screen-sm-min) {
+    &__title {
+
+    }
+  }
+
+  @media (min-width $screen-md-min) {
+    &__title {
+      margin-left 0
+      margin-right 0
+    }
+  }
+}

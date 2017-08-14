@@ -1,0 +1,77 @@
+.usability-block {
+  padding rem(20) rem(30)
+  background #f0f0f0
+  margin 0 0 rem(25)
+
+  &__col {
+    text-align center
+    &_1 {
+      color $blue-1
+      font-size rem(14)
+      font-weight 700
+      margin-bottom rem(20)
+    }
+    &_2 {
+      margin-bottom rem(20)
+    }
+    &_3 {
+
+    }
+  }
+
+  &__link {
+    font-size rem(18)
+    text-decoration none
+    &:hover, &:focus {
+      text-decoration none
+    }
+  }
+
+  &__link-to-top {
+    display inline-block
+    vertical-align top
+    color $blue-2
+    font-size rem(14)
+    text-align left
+    padding-left rem(39)
+    position relative
+    &:before {
+      position absolute
+      top rem(2)
+      left 0
+      width rem(31)
+      height rem(31)
+      background #0070ba
+      border-radius rem(6)
+      color white
+      font-size rem(25)
+      line-height rem(31)
+      text-align center
+    }
+    &:hover, &:focus {
+      color $blue-2
+      text-decoration none
+    }
+  }
+
+  @media (min-width $screen-sm-min) {
+    display flex
+    justify-content space-between
+
+    &__col {
+      text-align left
+      &_1 {
+        color $blue-1
+        font-size rem(14)
+        font-weight 700
+        margin 0 rem(10) 0 0
+      }
+      &_2 {
+        margin 0 rem(10)
+      }
+      &_3 {
+        margin 0 0 0 rem(10)
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.articles-list-2 {
+  .article-item-2 {
+    margin 0 0 rem(22)
+    &:nth-child(3n + 2) {
+      .article-item-2__inner {
+        background $orange-1
+        &:hover, &:focus {
+          background darken($orange-1, 15%)
+        }
+      }
+    }
+    &:nth-child(3n + 3) {
+      .article-item-2__inner {
+        background $blue-1
+        &:hover, &:focus {
+          background darken($blue-1, 15%)
+        }
+      }
+    }
+  }
+
+  @media (min-width $screen-sm-min) {
+    .article-item-2 {
+      &:nth-child(3n + 2) {
+        .article-item-2__inner {
+          &:before {
+            background #d37d00
+          }
+          &:hover, &:focus {
+            &:before {
+              background darken(#d37d00, 15%)
+            }
+          }
+        }
+      }
+      &:nth-child(3n + 3) {
+        .article-item-2__inner {
+          &:before {
+            background #237da7
+          }
+          &:hover, &:focus {
+            &:before {
+              background darken(#237da7, 15%)
+            }
+          }
+        }
+      }
+    }
+  }
+}

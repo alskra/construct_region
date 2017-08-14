@@ -1,0 +1,42 @@
+.menu-categories {
+  overflow hidden
+  border 1px solid #d5d5d5
+  border-radius rem(2)
+  margin 0 0 rem(20)
+
+  &__item {
+    & + {r}__item {
+      border-top 1px solid #c5c5c5
+    }
+
+    &_current {
+      &>{r}__btn {
+        color $blue-2
+        background #c7e8f3
+        background-clip padding-box
+      }
+    }
+  }
+
+  &__btn {
+    display flex
+    justify-content center
+    align-items center
+    color #666666
+    text-decoration none
+    font-size rem(14)
+    line-height 1.25em
+    text-align center
+    font-weight 700
+    min-height rem(44)
+    padding rem(4) rem(15)
+    background linear-gradient(to bottom, #ffffff, #f9f9f9)
+    border 1px solid transparent
+    &:hover, &:focus {
+      color $blue-2
+      text-decoration none
+      background #c7e8f3
+      background-clip padding-box
+    }
+  }
+}

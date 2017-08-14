@@ -1,0 +1,62 @@
+.form-search {
+  display none
+  position absolute
+  top rem(6)
+  right rem(37)
+  left rem(37)
+
+  &__field {
+    color white
+    font-size 12px
+    font-style italic
+    width 100%
+    height rem(25)
+    padding 0 rem(5)
+    background #80b8dd
+    border 0
+    border-radius rem(6)
+    input[type="search"]& {
+      box-sizing border-box
+    }
+    &::placeholder {
+      color white
+    }
+  }
+
+  @media (min-width $screen-md-min) {
+    flex none
+    display block !important
+    width rem(170)
+    position relative
+    top auto
+    right auto
+    left auto
+    margin auto 0 auto auto
+
+    &__field {
+      padding-right rem(30)
+    }
+
+    &__btn {
+      width rem(25)
+      height rem(25)
+      padding 0
+      background none
+      border 0
+      border-radius rem(6)
+      position absolute
+      top 0
+      right 0
+      &:before {
+        color white
+        font-size rem(18)
+        line-height 1em
+      }
+    }
+  }
+
+  @media (min-width $screen-lg-min) {
+    width rem(260)
+  }
+}
+

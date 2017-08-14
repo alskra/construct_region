@@ -1,0 +1,91 @@
+.about-list {
+  display flex
+  flex-flow row wrap
+  margin rem(25) rem(-10) rem(30)
+  &:after {
+    content ''
+    display block
+    width uq('calc(100% - ' + rem(20) + ')')
+    margin 0 auto
+    border-bottom 2px solid #cacaca
+  }
+
+  &__item {
+    display block
+    flex none
+    width uq('calc(100% - ' + rem(20) + ')')
+    color inherit
+    text-decoration none
+    text-align center
+    margin 0 rem(10) rem(20)
+    &:hover, &:focus {
+      color inherit
+      text-decoration none
+      & {r}__title {
+        color $blue-1
+      }
+    }
+  }
+
+  &__img-wrap {
+    display none
+    justify-content center
+    align-items center
+    height rem(50)
+    margin-bottom rem(15)
+  }
+
+  &__img {
+    display block
+    max-width 100%
+    max-height 100%
+    margin 0 auto
+  }
+
+  &__title {
+    color $blue-2
+    font-size rem(13)
+    font-weight 700
+    transition $transition-base
+    &:after {
+      content ''
+      display block
+      width rem(45)
+      margin rem(10) auto 0
+      border-bottom 2px solid $blue-2
+    }
+  }
+
+  @media (min-width em-root(425)) {
+    &__item {
+      width uq('calc(50% - ' + rem(20) + ')')
+    }
+  }
+
+  @media (min-width $screen-sm-min) {
+    &__item {
+      width uq('calc(100%/4 - ' + rem(20) + ')')
+    }
+
+    &__img-wrap {
+      display flex
+      height rem(97)
+    }
+
+    &__title {
+      &:after {
+        display none
+      }
+    }
+  }
+
+  @media (min-width $screen-md-min) {
+    &__item {
+      width uq('calc(100%/8 - ' + rem(20) + ')')
+    }
+
+    &__img-wrap {
+      height rem(97)
+    }
+  }
+}

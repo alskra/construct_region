@@ -1,0 +1,28 @@
+{
+  "name": "construct_region",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "alskra <krasnoyurchenko.a.s@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "",
+    "jquery-touch-events": "",
+    "perfect-scrollbar": "",
+    "jquery-mask-plugin": "",
+    "jquery-validation": "",
+    "slick-carousel": "",
+    "fancybox": "",
+    "slideout.js": "",
+    "parsleyjs": ""
+  }
+}
