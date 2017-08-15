@@ -8,6 +8,9 @@
   top 0
   left 0
   z-index $zindex-navbar-fixed
+  .btn {
+    vertical-align middle
+  }
 
   &__toggle-menu {
     float left
@@ -59,12 +62,14 @@
   }
 
   &__tel {
+    vertical-align middle
     font-size rem(18)
     font-weight bold
     line-height 1.25em
     letter-spacing rem(0.9)
     color $black-1
     text-decoration none
+    margin 0 rem(10)
     &:hover, &:focus {
       color $black-1
       text-decoration none
@@ -72,25 +77,15 @@
   }
 
   &__order-call {
-    margin rem(15) auto 0
+    margin rem(15) rem(10)
   }
 
   @media (min-width $screen-sm-min) {
-    &__logo {
-    }
 
-    &__tel {
-      vertical-align middle
-    }
-
-    &__order-call.btn {
-      vertical-align middle
-      margin 0 0 0 rem(30)
-    }
   }
 
   @media (min-width $screen-md-min) {
-    padding rem(21) 0
+    padding 0
     position relative
 
     &__top {
@@ -101,7 +96,7 @@
     &__logo {
       float none
       flex none
-      margin rem(4) rem(25) rem(3) 0
+      margin rem(24) rem(20) rem(24) 0
     }
 
     &__panel {
@@ -118,31 +113,43 @@
 
     &__panel-bottom {
       display flex
+      flex-flow column
       align-items flex-start
       flex none
-      margin 0 0 0 rem(30)
+      margin rem(7) 0 0 rem(25)
     }
 
     &__tel {
       flex none
-      margin auto 0
+      margin 0 0 rem(5)
     }
 
-    &__order-call.btn {
+    &__order-call {
       flex none
-      margin 0 0 0 rem(24)
+      margin 0
     }
   }
 
   @media (min-width $screen-lg-min) {
-    .container-fluid {
-      max-width rem(1750)
+    &__panel-bottom {
+      flex-flow row
+      margin rem(20) 0 0 rem(75)
+    }
+
+    &__tel {
+      margin auto 0
+    }
+
+    &__order-call {
+      margin 0 0 0 rem(25)
     }
   }
 
-  @media (min-width em-root(1920px)) {
-    &__panel-bottom {
-      margin 0 0 0 rem(70)
+  @media (min-width em-root(1440px)) {
+    .container-fluid {
+      max-width none
+      margin-left percentage(100/1920)
+      margin-right percentage(100/1920)
     }
   }
 }

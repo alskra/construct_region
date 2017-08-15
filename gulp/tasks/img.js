@@ -15,7 +15,7 @@ module.exports = function () {
             ]),
             $.gp.debug({title: 'DEBUG "img": '}),
             $.gulp.dest(function (file) {
-                return file.path.indexOf('img/content/') !== -1 ? 'build/static/img/content/' : 'build/static/img/general/';
+                return file.path.indexOf($.path.resolve('sources/static/img/content/')) !== -1 ? 'build/static/img/content/' : 'build/static/img/general/';
             })
         ).on('error', $.gp.notify.onError(function(err) {
             return {

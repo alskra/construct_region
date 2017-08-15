@@ -1,46 +1,38 @@
 .social-networks {
   display flex
   flex-flow row wrap
-  justify-content center
-  margin 0 rem(-3) rem(15)
+  align-items center
 
   &__title {
-    color $blue-2
-    font-size rem(14)
-    text-align center
-    width 100%
-    margin 0 rem(3) rem(10)
+    margin 0 0 rem(10)
   }
 
   &__item {
-    color #b1b1b1
+    display inline-flex
+    vertical-align top
+    justify-content center
+    align-items center
+    color #ffffff
     text-decoration none
-    margin 0 rem(3) rem(10)
-    font-size rem(32)
+    font-size rem(14)
     line-height 1em
+    width rem(28)
+    height rem(28)
+    border 1px solid #a6a6a6
     border-radius 50%
+    margin 0 0 rem(10) rem(10)
     &:hover, &:focus {
-      color $blue-1
+      color #ffffff
       text-decoration none
+      border-color white
     }
   }
 
   @media (min-width $screen-sm-min) {
-    justify-content flex-end
-    align-items center
-    margin-left 0
-    margin-right 0
 
-    &__title {
-      width auto
-      text-align right
-      margin-left 0
-      margin-right rem(10)
-    }
+  }
 
-    &__item {
-      margin-left rem(5)
-      margin-right 0
-    }
+  @media (min-width $screen-md-min) {
+
   }
 }

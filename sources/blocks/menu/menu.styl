@@ -3,43 +3,30 @@
 
   &__item {
     &_submenu {
-      position relative
-
       & > {r}__btn {
-        margin-right rem(42)
-      }
-
-      & > {r}__icon {
-        font-size rem(18)
-        line-height 1.25em
-        width rem(42)
-        padding rem(10) 0
-        background none
-        border 0
-        position absolute
-        top 0
-        right 0
-        &:before {
-          font-size rem(12)
-        }
       }
     }
 
     &_current {
       & > {r}__btn {
-        color #e62727
-      }
-
-      & > {r}__icon {
-        color #e62727
+        &_lvl_1 {
+          &, &:hover, &:focus {
+            &:before {
+              background $red-1
+            }
+          }
+        }
       }
     }
 
     &_opened {
-      & > {r}__icon {
-        color #e62727
-        &:before {
-          transform rotate(-180deg)
+      & > {r}__btn {
+        &_lvl_1 {
+          &, &:hover, &:focus {
+            &:before {
+              background $red-1
+            }
+          }
         }
       }
     }
@@ -52,33 +39,48 @@
     line-height 1.25em
     color $black-1
     text-decoration none
-    padding rem(10) ($grid-gutter-width/2)
-    &:hover, &:focus {
-      color #e62727
-      text-decoration none
+    padding rem(14) ($grid-gutter-width/2)
+
+    &_lvl_1 {
+      position relative
+      &:before {
+        content ''
+        width rem(4)
+        background transparent
+        transition inherit
+        position absolute
+        top 0
+        bottom 0
+        left 0
+      }
+      &:hover, &:focus {
+        color $black-1
+        text-decoration none
+        &:before {
+          background $red-1
+        }
+      }
     }
 
     &_lvl_2 {
       font-size rem(16)
       padding-left $grid-gutter-width
+      &:hover, &:focus {
+        color $red-1
+        text-decoration none
+      }
     }
   }
 
   &__icon {
-    color $black-1
-    transition $transition-base
-    &:before {
-      display block
-      transition transform $transition-duration-base $transition-timing-function-base
-    }
-    &:hover, &:focus {
-      color #e62727
-    }
+
   }
 
   &__submenu {
     display none
-    z-index $zindex-dropdown
+    .container-fluid {
+      padding 0
+    }
   }
 
   @media (min-width $screen-md-min) {
@@ -87,45 +89,57 @@
 
     &__item {
       &_lvl_1 {
+        margin 0 rem(25)
+      }
 
+      &_lvl_2 {
+        display inline-block
+        margin rem(9) rem(35) rem(9) 0
       }
 
       &_submenu {
-        & > {r}__btn {
-          padding-right 0
-          margin-right rem(45)
-        }
 
-        & > {r}__icon {
-          width auto
-          padding-left rem(10)
-          padding-right rem(25)
-          &:before {
-            font-size rem(10)
-          }
-        }
       }
     }
 
     &__btn {
-      padding rem(10) rem(25)
+      &_lvl_1 {
+        padding rem(30) 0 rem(31)
+        &:before {
+          width auto
+          height rem(4)
+          top auto
+          right 0
+        }
+      }
 
       &_lvl_2 {
-        padding rem(7) rem(15)
+        padding 0
       }
     }
 
     &__submenu {
       text-align left
-      min-width 100%
-      background-color #fff
-      border 1px solid rgba(0, 0, 0, 0.15)
-      border-radius 0 0 rem(4) rem(4)
-      box-shadow 0 rem(6) rem(12) rgba(0,0,0,0.175)
-      background-clip padding-box
+      background-color #fbfbfb
+      padding rem(34) 0
+      border-top 1px solid #e6e6e6
       position absolute
       top 100%
       right 0
+      left 0
+      &:before {
+        content ''
+        box-shadow 0 rem(2) rem(30) 0 rgba(40, 41, 43, 0.15)
+        position absolute
+        top rem(30)
+        right 0
+        bottom 0
+        left 0
+        z-index -1
+      }
+      .container-fluid {
+        padding 0 ($grid-gutter-width/2)
+      }
     }
   }
 }

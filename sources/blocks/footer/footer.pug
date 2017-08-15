@@ -1,3 +1,5 @@
+include ../social-networks/social-networks
+
 mixin footer()
   footer.-footer&attributes(attributes)
     .__top
@@ -50,5 +52,24 @@ mixin footer()
                     +a(pages.contacts.url + '#order-call') Написать нам
                   li
                     +a(pages.sitemap.url) Карта сайта
-          .-col-xs-12.col-sm-12.col-md-4
+          .-col-xs-12.col-sm-12.col-md-4.footer__col-last
+            +a('tel:+74956493479').-footer.__tel(title='Позвонить') +7 495 649-34-79
+            br.hidden-sm.hidden-lg
+            +a(pages.contacts.url + '#order-call').-footer.__order-call.btn.btn_2 Заказать звонок
+            address.-footer.__address
+              p.
+                105066,&nbsp;Москва#[br]
+                ул.&nbsp;Нижняя Красносельская, вл.&nbsp;40/12, корп.&nbsp;20,#[br] ДЦ&nbsp;«Новь», 5&nbsp;этаж, офис&nbsp;507
+    .__bottom
+      .-container-fluid
+        .-row
+          .-col-xs-12.col-sm-6.col-lg-7
+            p
+              span.-footer.__copyright &copy;&nbsp;2017&nbsp;Construct Region
+              +a(pages.confidentiality.url) Политика конфиденциальности
+          .-col-xs-12.col-sm-6.col-lg-5.footer__col-last-2
+            +social-networks()
+            p.-footer.__dev Создание сайтов&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;
+              +a('//design-lab.ru')(target='_blank')
+                img(src=`${paths.imgGeneral}/dsgnlab-logo.svg` alt='Дизайн-Лаб' title='Дизайн-Лаб')
     block

@@ -1,4 +1,4 @@
-.btn
+.btn {
   display inline-block
   line-height 1.25em
   text-align center
@@ -16,33 +16,39 @@
 
   &,
   &:active,
-  &.active
+  &.active {
     &:focus,
-    &.focus
+    &.focus {
       outline 0
+    }
+  }
 
   &:hover,
   &:focus,
-  &.focus
+  &.focus {
     //color $btn-default-color
     text-decoration none
+  }
 
   &:active,
-  &.active
+  &.active {
     outline 0
     //background-image none
     //box-shadow inset 0 3px 5px rgba(0, 0, 0, .125)
+  }
 
   &.disabled,
   &[disabled],
-  fieldset[disabled] &
+  fieldset[disabled] & {
     disabled()
+  }
 
-  &__icon
+  &__icon {
     display inline-block
     vertical-align top
+  }
 
-  &_1
+  &_1 {
     color $black-1
     font-weight 600
     font-size rem(14)
@@ -52,9 +58,34 @@
     border 1px solid rgba(#e6e6e6, 0.5)
     &:hover,
     &:focus,
-    &.focus
+    &.focus {
       color $black-1
       border-color rgba($black-1, 0.5)
+    }
     &:active,
-    &.active
+    &.active {
       //box-shadow inset 0 3px 5px rgba(0, 0, 0, .125)
+    }
+  }
+
+  &_2 {
+    color $black-1
+    font-weight 600
+    font-size rem(14)
+    letter-spacing rem(0.3)
+    padding rem(11) rem(18) rem(12)
+    border-radius 100px
+    border 1px solid rgba(#e6e6e6, 1)
+    &:hover,
+    &:focus,
+    &.focus {
+      color $black-1
+      border-color rgba($black-1, 0.5)
+    }
+    &:active,
+    &.active {
+      //box-shadow inset 0 3px 5px rgba(0, 0, 0, .125)
+    }
+  }
+
+}

@@ -30,8 +30,8 @@ mixin menu(menuList)
       .__item._lvl_1(class={_submenu: itemLvl1.submenu, _current: itemLvl1.url === pageUrls[0]})
         a.__btn._lvl_1(href=itemLvl1.url)=itemLvl1.title
         if itemLvl1.submenu
-          button.__icon._lvl_1.glyphicon.glyphicon-angle-arrow-down(type='button' data-toggle='submenu')
           .__submenu._lvl_1
-            each itemLvl2 in itemLvl1.submenu
-              .__item._lvl_2(class={_submenu: itemLvl2.submenu, _current: itemLvl2.url === pageUrls[1]})
-                a.__btn._lvl_2(href=itemLvl2.url)=itemLvl2.title
+            .-container-fluid
+              each itemLvl2 in itemLvl1.submenu
+                .-menu.__item._lvl_2(class={_submenu: itemLvl2.submenu, _current: itemLvl2.url === pageUrls[1]})
+                  a.__btn._lvl_2(href=itemLvl2.url)=itemLvl2.title

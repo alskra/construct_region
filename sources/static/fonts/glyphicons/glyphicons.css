@@ -31,6 +31,10 @@
   content: "\E002";
 }
 
-.glyphicon-menu-lines:before {
+.glyphicon-facebook:before {
   content: "\E003";
+}
+
+.glyphicon-menu-lines:before {
+  content: "\E004";
 }

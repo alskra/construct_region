@@ -1,13 +1,16 @@
-.page
+.page {
   display flex
+}
 
-@keyframes loading
-  100%
+@keyframes loading {
+  100% {
     transform rotate(360deg)
+  }
+}
 
 // loading
-.loading
-  &:before
+.loading {
+  &:before {
     content ''
     position absolute
     width rem(30px)
@@ -15,7 +18,7 @@
     margin rem(-15px)
     border-width rem(3px)
     border-style solid
-    border-color $blue-1
+    border-color $red-1
     border-right-color transparent
     border-radius 50%
     top 50%
@@ -24,29 +27,37 @@
     bottom 50%
     animation loading 1.2s linear infinite
     z-index $zindex-navbar
+  }
+}
 
 // fancybox
-.fancybox-bg
+.fancybox-bg {
   background white
+}
 
-.fancybox-slide
+.fancybox-slide {
   white-space nowrap
-  > *:not(.fancybox-loading)
+  > *:not(.fancybox-loading) {
     white-space normal
     background-color white
     box-shadow 0 5px 29px rgba(0, 0, 0, 0.12)
     margin 0
+  }
 
-  @media (min-width $screen-sm-min)
+  @media (min-width $screen-sm-min) {
     padding $grid-gutter-width
+  }
+}
 
-.fancybox-arrow
+.fancybox-arrow {
   visibility hidden
   transition opacity .25s, visibility 0s linear .25s
-  .fancybox-show-nav &
+  .fancybox-show-nav & {
     opacity 1
     visibility visible
     transition opacity .25s, visibility 0s
+  }
+}
 
 // slideout
 .slideout-menu {
@@ -77,36 +88,89 @@
   display: block;
 }
 
-.page
-  &_home-project
+.page {
+  &_home-project {
     display block
-    & {$p}__header
+    & {$p}__header {
       background #2a333c
       margin 0 0 20px
       padding 30px 0
-    & {$p}__title
+    }
+    & {$p}__title {
       color white
       margin 0
-      small
+      small {
         color inherit
+      }
+    }
+  }
 
-  for $key, $val in $colors
-    &_{$key}
+  for $key, $val in $colors {
+    &_{$key} {
       $blue-1 = $val;
       $link-color = $blue-1
       $link-hover-color = darken($link-color, 15%)
 
       // scaffolding
-      ::selection
+      ::selection {
         background $blue-1
-      a
+      }
+      a {
         color $link-color
         &:hover,
-        &:focus
+        &:focus {
           color $link-hover-color
+        }
+      }
 
       // loading
-      .loading
-        &:before
+      .loading {
+        &:before {
           border-color $blue-1
           border-right-color transparent
+        }
+      }
+    }
+  }
+
+  @media (min-width $screen-md-min) {
+    &_index {
+      .header {
+        background none
+        border-color rgba(#e6e6e6, 0.15)
+        position absolute
+        &__logo {
+          &:before {
+            content url('logo-white.svg')
+          }
+        }
+        &__tel {
+          &, &:hover, &:focus {
+            color white
+          }
+        }
+      }
+      .menu {
+        &__btn {
+          &_lvl_1 {
+            &, &:hover, &:focus {
+              color white
+            }
+          }
+        }
+      }
+      .btn_1 {
+        color white
+        border-color #e6e6e6
+        &:hover,
+        &:focus,
+        &.focus {
+          color white
+          background $red-1
+          border-color $red-1
+        }
+      }
+    }
+
+  }
+}

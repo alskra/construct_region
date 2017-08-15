@@ -2,15 +2,27 @@ include ../blocks/doctype/doctype
 
 block variables
   -
-    var pageTitle = pages.index.title,
-    pageUrls = [pages.index.url];
+    var pageTitle = pages.index.title, pageUrls = [pages.index.url];
 
 include ../blocks/header/header
 include ../blocks/content/content
 include ../blocks/footer/footer
 
-+doctype(pageTitle)
++doctype(pageTitle)._index
   .-wrapper
     +header()
     +content()
+      .-slider-main.slick-slider(data-slick='{"autoplay": false, "autoplaySpeed": 7000}')
+        .__item.slick-slide
+          img.__img(
+            src=`${paths.imgContent}/slider-main/slide-1.jpg`
+            srcset=`${paths.imgContent}/slider-main/slide-1@1024w.jpg 1024w, ${paths.imgContent}/slider-main/slide-1@1920w.jpg 1920w, ${paths.imgContent}/slider-main/slide-1@2048w.jpg 2048w, ${paths.imgContent}/slider-main/slide-1@4096w.jpg 4096w`
+            data-object-fit='cover' onload='objectFit(this)'
+            sizes='100vw' alt=''
+          )
+          .__content.container-fluid
+            h2.__title Мы знаем о рекламе в регионах #[strong ВСЕ!]
+            .__description
+              p.
+                Поможем спланировать, оперативно разместить и оценить эффективность рекламной кампании в  регионах — от Калининграда до Камчатки
     +footer()

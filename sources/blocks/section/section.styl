@@ -1,14 +1,69 @@
 .section {
+  &__header {
+    padding rem(20) 0
+  }
+
   &__title {
-    color $blue-2
-    font-size rem(16)
-    line-height 1.25em
-    font-weight 700
-    text-transform uppercase
-    text-align center
-    padding rem(8) rem(15) rem(6)
-    background #e4e4e4
-    margin 0 (- ($grid-gutter-width/2)) rem(25)
+    font-size rem(42)
+    font-weight 300
+    line-height 1.33
+    color #ffffff
+    margin rem(17) 0 rem(23)
+  }
+
+  &__about-info {
+    margin 0 0 rem(60)
+  }
+
+  &__about-info-content {
+    padding rem(30) rem(25) rem(30)
+    background-color #ffffff
+    border solid 1px #e6e6e6
+    ul {
+      list-style none
+      padding 0
+      margin 0 0 rem(-35)
+      li {
+        margin 0 0 rem(35)
+        &:before {
+          content ''
+          display block
+          width 20px
+          height 1px
+          background-color #e6e6e6
+          margin 0 0 rem(13)
+        }
+      }
+    }
+  }
+
+  &__about-info-img {
+    display block
+    width 100%
+    position relative
+    margin 0 0 -1px
+  }
+
+  &__about-info-title {
+    font-size rem(25)
+    line-height 1.25
+    color $black-1
+    margin 0 0 rem(30)
+  }
+
+  &_about {
+    & {r}__header {
+      background url("bg-about.jpg") no-repeat 50% 0/cover
+      margin 0 0 rem(35)
+
+      @media $media-retina-2 {
+        background-image url("bg-about@2x.jpg")
+      }
+
+      @media $media-retina-3 {
+        background-image url("bg-about@3x.jpg")
+      }
+    }
   }
 
   @media (min-width $screen-sm-min) {
@@ -18,9 +73,30 @@
   }
 
   @media (min-width $screen-md-min) {
+    &__header {
+      padding rem(60) 0
+    }
+
     &__title {
-      margin-left 0
-      margin-right 0
+
+    }
+
+    &__about-info {
+      padding-left rem(35)
+    }
+
+    &__about-info-content {
+      padding rem(45) rem(40) rem(45) rem(50)
+    }
+
+    &__about-info-title {
+      margin 0 0 rem(45)
+    }
+
+    &_about {
+      & {r}__header {
+        margin 0 0 rem(75)
+      }
     }
   }
 }
