@@ -2,6 +2,8 @@
   overflow hidden
   height uq('calc(100vh - ' + rem(55) + ' - 1px)')
   min-height rem(400)
+  max-height rem(805)
+  background white
   p {
     &:last-child {
       margin 0
@@ -13,6 +15,14 @@
 
   &__item {
     position relative
+    &:not(.slick-current), &.loading {
+      & {r}__title {
+        animation none
+      }
+      & {r}__description {
+        animation none
+      }
+    }
   }
 
   &__img {
@@ -22,9 +32,13 @@
   }
 
   &__content {
+    display flex
+    flex-flow column
+    justify-content center
     color white
     height 100%
-    padding rem(45) rem(15)
+    padding-top rem(25)
+    padding-bottom rem(90)
     opacity 1
     transition 0.2s linear
     position relative
@@ -34,20 +48,33 @@
   }
 
   &__title {
+    overflow hidden
     color inherit
     font-size rem(32)
-    line-height 1.2
+    line-height 1.2em
     letter-spacing rem(-0.2)
     font-weight 300
+    text-transform uppercase
+    max-height 1.2em*3
+    line-clamp(3)
     margin 0 0 rem(23)
     strong {
       font-weight 800
     }
   }
 
+  &__description {
+    overflow hidden
+    font-size rem(18)
+    line-height 1.46em
+    max-height 1.46em*5
+    line-clamp(5)
+  }
+
   &__btn {
-    position relative
-    z-index 1
+    position absolute
+    bottom 0
+    left ($grid-gutter-width/2)
   }
 
   @media (min-width $screen-sm-min) {
@@ -55,10 +82,42 @@
   }
 
   @media (min-width $screen-md-min) {
+    height 100vh
 
+    &__content {
+      padding-top rem(94)
+      justify-content flex-end
+      align-items flex-start
+    }
+
+    &__content-inner {
+      max-width percentage(840/1720)
+    }
   }
 
   @media (min-width $screen-lg-min) {
+    min-height rem(805)
+    max-height none
 
+    &__content {
+      padding-top rem(130)
+      padding-bottom rem(175)
+    }
+
+    &__title {
+      font-size rem(64)
+    }
+
+    &__description {
+      font-size rem(24)
+    }
+  }
+
+  @media (min-width em-root(1440px)) {
+    .container-fluid {
+      max-width none
+      margin-left percentage(100/1920)
+      margin-right percentage(100/1920)
+    }
   }
 }

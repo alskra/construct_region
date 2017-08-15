@@ -82,24 +82,54 @@
             </nav>
             <div class="header__panel-bottom">
               <a href="tel:+74956493479" title="Позвонить" class="header__tel">+7 495 649-34-79</a>
-              <a class="header__order-call btn btn_1" href="contacts.html#order-call">Заказать звонок</a>
+              <a class="header__order-call btn btn_1" href="javascript:;" data-fancybox="" data-type="ajax" data-src="popups/order-call.html">Заказать звонок</a>
             </div>
           </div>
         </div>
       </header>
       <div class="content">
-        <div class="slider-main slick-slider" data-slick="{&quot;autoplay&quot;: false, &quot;autoplaySpeed&quot;: 7000}">
-          <div class="slider-main__item slick-slide">
-            <img src="static/img/content/slider-main/slide-1.jpg" srcset="static/img/content/slider-main/slide-1@1024w.jpg 1024w, static/img/content/slider-main/slide-1@1920w.jpg 1920w, static/img/content/slider-main/slide-1@2048w.jpg 2048w, static/img/content/slider-main/slide-1@4096w.jpg 4096w"
-              data-object-fit="cover" onload="objectFit(this)" sizes="100vw" alt="" class="slider-main__img">
-            <div class="slider-main__content container-fluid">
-              <h2 class="slider-main__title">Мы знаем о рекламе в регионах
-                <strong>ВСЕ!</strong>
-              </h2>
-              <div class="slider-main__description">
-                <p>Поможем спланировать, оперативно разместить и оценить эффективность рекламной кампании в регионах — от Калининграда до Камчатки</p>
+        <div class="slider-main-wrap">
+          <div class="slider-main slick-slider" data-slick="{&quot;autoplay&quot;: true, &quot;autoplaySpeed&quot;: 7000}">
+            <div class="slider-main__item slick-slide loading">
+              <img data-lazy="static/img/content/slider-main/slide-1.jpg" data-lazy-srcset="static/img/content/slider-main/slide-1@1024w.jpg 1024w, static/img/content/slider-main/slide-1@1920w.jpg 1920w, static/img/content/slider-main/slide-1@2048w.jpg 2048w, static/img/content/slider-main/slide-1@4096w.jpg 4096w"
+                data-object-fit="cover" onload="objectFit(this)" sizes="100vw" alt="" class="slider-main__img">
+              <div class="slider-main__content container-fluid">
+                <div class="slider-main__content-inner">
+                  <h2 class="slider-main__title fadeInDown animated">Мы знаем о рекламе в&nbsp;регионах
+                    <strong>ВСЕ!</strong>
+                  </h2>
+                  <div class="slider-main__description fadeInUp animated">
+                    <p>Поможем спланировать, оперативно разместить и оценить эффективность рекламной кампании в регионах — от Калининграда до Камчатки</p>
+                  </div>
+                  <a class="slider-main__btn btn btn_3" href="javascript:;">
+                    <span class="btn__icon hidden-xs"></span>
+                    <span class="btn__label">Узнать больше</span>
+                  </a>
+                </div>
               </div>
             </div>
+            <div class="slider-main__item slick-slide loading">
+              <img data-lazy="static/img/content/slider-main/slide-2.jpg" data-lazy-srcset="static/img/content/slider-main/slide-2@1024w.jpg 1024w, static/img/content/slider-main/slide-2@1920w.jpg 1920w, static/img/content/slider-main/slide-2@2048w.jpg 2048w, static/img/content/slider-main/slide-2@4096w.jpg 4096w"
+                data-object-fit="cover" onload="objectFit(this)" sizes="100vw" alt="" class="slider-main__img">
+              <div class="slider-main__content container-fluid">
+                <div class="slider-main__content-inner">
+                  <h2 class="slider-main__title fadeInDown animated">Заголовок слайда
+                    <strong>2!</strong>
+                  </h2>
+                  <div class="slider-main__description fadeInUp animated">
+                    <p>Tragedy at the saucer section was the love of life, influenced to an extraterrestrial processorи Alignment at the planet was the nuclear flux of honor, travelled to a delighted particle</p>
+                  </div>
+                  <a class="slider-main__btn btn btn_3" href="javascript:;">
+                    <span class="btn__icon hidden-xs"></span>
+                    <span class="btn__label">Узнать больше</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="social-networks hidden-xs">
+            <span class="social-networks__title">Мы в соцсетях</span>
+            <a class="social-networks__item glyphicon glyphicon-facebook" href="javascript:;" target="_blank" title="Facebook"></a>
           </div>
         </div>
       </div>
@@ -177,7 +207,7 @@
                   <dd>
                     <ul>
                       <li>
-                        <a href="contacts.html#order-call">Написать нам</a>
+                        <a href="javascript:;">Написать нам</a>
                       </li>
                       <li>
                         <a href="sitemap.html">Карта сайта</a>
@@ -189,7 +219,7 @@
               <div class="col-xs-12 col-sm-12 col-md-4 footer__col-last">
                 <a href="tel:+74956493479" title="Позвонить" class="footer__tel">+7 495 649-34-79</a>
                 <br class="hidden-sm hidden-lg">
-                <a class="footer__order-call btn btn_2" href="contacts.html#order-call">Заказать звонок</a>
+                <a class="footer__order-call btn btn_2" href="javascript:;" data-fancybox="" data-type="ajax" data-src="popups/order-call.html">Заказать звонок</a>
                 <address class="footer__address">
                   <p>105066,&nbsp;Москва
                     <br> ул.&nbsp;Нижняя Красносельская, вл.&nbsp;40/12, корп.&nbsp;20,
@@ -224,8 +254,5 @@
         </div>
       </footer>
     </div>
-    <!-- JS--><script src="static/js/components.js"></script><script src="static/js/blocks.js"></script>
-    <!-- SVG Inline-->
-    <!--include ../../-->
-  </body>
+    <!-- JS--><script src="static/js/components.js"></script><script src="static/js/blocks.js"></script></body>
 </html>

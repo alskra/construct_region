@@ -12,17 +12,39 @@ include ../blocks/footer/footer
   .-wrapper
     +header()
     +content()
-      .-slider-main.slick-slider(data-slick='{"autoplay": false, "autoplaySpeed": 7000}')
-        .__item.slick-slide
-          img.__img(
-            src=`${paths.imgContent}/slider-main/slide-1.jpg`
-            srcset=`${paths.imgContent}/slider-main/slide-1@1024w.jpg 1024w, ${paths.imgContent}/slider-main/slide-1@1920w.jpg 1920w, ${paths.imgContent}/slider-main/slide-1@2048w.jpg 2048w, ${paths.imgContent}/slider-main/slide-1@4096w.jpg 4096w`
+      .-slider-main-wrap
+        .-slider-main.slick-slider(data-slick='{"autoplay": true, "autoplaySpeed": 7000}')
+          .__item.slick-slide.loading
+            img.__img(
+              data-lazy=`${paths.imgContent}/slider-main/slide-1.jpg`
+              data-lazy-srcset=`${paths.imgContent}/slider-main/slide-1@1024w.jpg 1024w, ${paths.imgContent}/slider-main/slide-1@1920w.jpg 1920w, ${paths.imgContent}/slider-main/slide-1@2048w.jpg 2048w, ${paths.imgContent}/slider-main/slide-1@4096w.jpg 4096w`
+              data-object-fit='cover' onload='objectFit(this)'
+              sizes='100vw' alt=''
+            )
+            .__content.container-fluid
+              .__content-inner
+                h2.__title.fadeInDown.animated.
+                  Мы знаем о рекламе в&nbsp;регионах #[strong ВСЕ!]
+                .__description.fadeInUp.animated
+                  p.
+                    Поможем спланировать, оперативно разместить и оценить эффективность рекламной кампании в  регионах — от Калининграда до Камчатки
+                +a().__btn.btn.btn_3 #[span.btn__icon.hidden-xs] #[span.btn__label Узнать больше]
+          .__item.slick-slide.loading
+            img.__img(
+            data-lazy=`${paths.imgContent}/slider-main/slide-2.jpg`
+            data-lazy-srcset=`${paths.imgContent}/slider-main/slide-2@1024w.jpg 1024w, ${paths.imgContent}/slider-main/slide-2@1920w.jpg 1920w, ${paths.imgContent}/slider-main/slide-2@2048w.jpg 2048w, ${paths.imgContent}/slider-main/slide-2@4096w.jpg 4096w`
             data-object-fit='cover' onload='objectFit(this)'
             sizes='100vw' alt=''
-          )
-          .__content.container-fluid
-            h2.__title Мы знаем о рекламе в регионах #[strong ВСЕ!]
-            .__description
-              p.
-                Поможем спланировать, оперативно разместить и оценить эффективность рекламной кампании в  регионах — от Калининграда до Камчатки
+            )
+            .__content.container-fluid
+              .__content-inner
+                h2.__title.fadeInDown.animated.
+                  Заголовок слайда #[strong 2!]
+                .__description.fadeInUp.animated
+                  p.
+                    Tragedy at the saucer section was the love of life, influenced to an extraterrestrial processorи
+                    Alignment at the planet was the nuclear flux of honor, travelled to a delighted particle
+                +a().__btn.btn.btn_3 #[span.btn__icon.hidden-xs] #[span.btn__label Узнать больше]
+
+        +social-networks().hidden-xs
     +footer()

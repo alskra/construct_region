@@ -49,13 +49,13 @@ mixin footer()
               dd
                 ul
                   li
-                    +a(pages.contacts.url + '#order-call') Написать нам
+                    +a() Написать нам
                   li
                     +a(pages.sitemap.url) Карта сайта
           .-col-xs-12.col-sm-12.col-md-4.footer__col-last
             +a('tel:+74956493479').-footer.__tel(title='Позвонить') +7 495 649-34-79
             br.hidden-sm.hidden-lg
-            +a(pages.contacts.url + '#order-call').-footer.__order-call.btn.btn_2 Заказать звонок
+            +a().-footer.__order-call.btn.btn_2(data-fancybox='' data-type='ajax' data-src='popups/order-call.html') Заказать звонок
             address.-footer.__address
               p.
                 105066,&nbsp;Москва#[br]

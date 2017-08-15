@@ -1,0 +1,29 @@
+.slider-main-wrap {
+  position relative
+
+  .social-networks {
+    font-size rem(14)
+    text-transform uppercase
+    color #a6a6a6
+    letter-spacing rem(1)
+    position absolute
+    right rem(100)
+    bottom rem(35)
+    z-index 10
+    margin 0 0 rem(-15)
+    &__title {
+      margin 0 0 rem(15)
+    }
+    &__item {
+      font-size rem(17)
+      width rem(35)
+      height rem(35)
+      background $red-1
+      border 0
+      margin 0 0 rem(15) rem(15)
+      &:hover, &:focus {
+        background darken($red-1, 10%)
+      }
+    }
+  }
+}
