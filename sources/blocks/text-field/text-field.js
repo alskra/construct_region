@@ -11,6 +11,9 @@ function hasVal() {
 
 $(function () {
     hasVal();
+    $('[data-mask]').each(function () {
+        $(this).addClass('init-mask');
+    });
 });
 
 $(document).ajaxComplete(function() {

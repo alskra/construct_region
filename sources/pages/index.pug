@@ -263,6 +263,6 @@ include ../blocks/checkbox/checkbox
                 span.__text Сообщение
             .-form-row._last
               .__agreement
-                +checkbox(name='agreement' required) Я&nbsp;ознакомлен с&nbsp;#[+a(pages.confidentiality.url) политикой конфиденциальности] и&nbsp;даю согласие на&nbsp;обработку своих персональных данных.
+                +checkbox(name='agreement' required) Я&nbsp;ознакомлен с&nbsp;#[+a(pages.confidentiality.url)(target='_blank') политикой конфиденциальности] #[br]и&nbsp;даю #[+a()(target='_blank') согласие на&nbsp;обработку своих персональных данных].
               button.__btn-submit.btn.btn_4(type='submit' data-toggle='submit') Отправить
     +footer()

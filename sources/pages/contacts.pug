@@ -1,0 +1,92 @@
+include ../blocks/doctype/doctype
+
+block variables
+  -
+    var pageTitle = pages.contacts.title, pageUrls = [pages.contacts.url];
+
+include ../blocks/header/header
+include ../blocks/content/content
+include ../blocks/footer/footer
+include ../blocks/checkbox/checkbox
+
++doctype(pageTitle)
+  .-wrapper
+    +header()
+    +content()
+      section.-section-2
+        header.__header
+          .-container-fluid
+            h1.-section-2.__title Контакты
+        .-container-fluid
+          .-row
+            .-col-xs-12.col-md-5
+              address.-contacts
+                h2.__title Адрес
+                p.
+                  105066,&nbsp;Москва, ул.&nbsp;Нижняя Красносельская, вл.&nbsp;40/12, корп.&nbsp;20, ДЦ&nbsp;«Новь», 5&nbsp;этаж, офис&nbsp;507
+                .__time-work
+                  p.
+                    ПН-ПТ с&nbsp;10.00 до&nbsp;19.00, СБ&nbsp;-&nbsp;ВС&nbsp;-&nbsp;выходной
+            .-col-xs-12.col-sm-6.col-md-3.col-md-offset-1
+              address.-contacts
+                h2.__title Телефон
+                p
+                  +a('tel:+74956493479').-contacts.__tel +7 495 649-34-79
+            .-col-xs-12.col-sm-6.col-md-3
+              address.-contacts
+                h2.__title Электронная почта
+                p
+                  +a('mailto:construct@construct-region.ru').-contacts construct@construct-region.ru
+          // Метки карты задаются через атрибут data-placemark
+          .-contact-map.ya-map(data-placemark='[{"coordinates": [55.773849, 37.671462], "hintContent": "Construct Region", "balloonContent": "105066,&nbsp;Москва, ул.&nbsp;Нижняя Красносельская, вл.&nbsp;40/12, корп.&nbsp;20, ДЦ&nbsp;«Новь», 5&nbsp;этаж, офис&nbsp;507"}]')
+          .-stations
+            .__item
+              span.__icon.glyphicon.glyphicon-m
+              .__title Красносельская
+              .__info 15&nbsp;минут пешком
+              .__popup
+                button.__btn-close.btn.glyphicon.glyphicon-cancel(type='button' data-toggle='close-station-popup' title='Закрыть')
+                .__popup-scroll
+                  p.
+                    Последний вагон из центра. На выходе из метро держитесь левее, переходите улицу с трамвайными путями и идите по ул. Нижняя Красносельская, проходите перекресток рядом с АЗС прямо. Переходите
+                    на другую сторону улицы. Проходите мимо арки ДЦ «Новь» и через 10 метров поворачиваете направо
+                    к центральному входу.
+            .__item
+              span.__icon.glyphicon.glyphicon-m
+              .__title Бауманская
+              .__info 10&nbsp;минут пешком
+              .__popup
+                button.__btn-close.btn.glyphicon.glyphicon-cancel(type='button' data-toggle='close-station-popup' title='Закрыть')
+                .__popup-scroll
+                  p.
+                    Sensorem de fidelis competition, fallere elogium! Domesticus, lotus fugas recte aperto de emeritis, primus domus. Finis, indictio, et lanista. Germanus, teres gabaliums unus attrahendam de neuter, albus particula.
+                    Castus caniss ducunt ad burgus. Primus, bassus domuss vix vitare de brevis, grandis amor.
+                    cur danista ortum.
+                  p.
+                    Cum terror ortum, omnes nuclear vexatum iacerees visum gratis, neuter genetrixes. Prarere solite ducunt ad ferox demissio. Cum hilotae messis, omnes ollaes prensionem ferox, festus canises.
+                    Fluctuis experimentum, tanquam noster zirbus. Cum pars trabem, omnes eleateses desiderium festus, camerarius abactores.
+                    cur equiso peregrinatione.
+
+          .-docs
+            +a().__item._pdf
+              .__icon
+              .__title Реквизиты
+              .__info ЗАО «Констракт-Регион», 1.5 Мб
+
+        form.-form-order-call-2(action='' method='get' data-parsley-validate="")
+          .-container-fluid
+            .-form-order-call-2.__inner
+              .__header
+                h3.__title Заказать звонок
+                p.
+                  У&nbsp;вас появились вопросы, наши специалисты ответят на&nbsp;них
+              .-form-row._group-btn
+                label.-form-label
+                  input.-text-field._type_2(type="tel" name="name" required minlength="16" data-mask="+7-000-000-00-00")
+                  span.__text Номер вашего телефона
+                button.__btn-submit.btn.btn_4(type='submit' data-toggle='submit') Отправить
+              .-form-row
+                .__agreement
+                  +checkbox(name='agreement' required) Я&nbsp;ознакомлен с&nbsp;#[+a(pages.confidentiality.url)(target='_blank') политикой конфиденциальности] #[br]и&nbsp;даю #[+a()(target='_blank') согласие на&nbsp;обработку своих персональных данных].
+
+    +footer()

@@ -1,11 +1,12 @@
-.form-label
+.form-label {
   display block
   position relative
-  .text-field
+  .text-field {
     display block
     width 100%
+  }
 
-  &__text
+  &__text {
     text-align left
     color #b8b9bb
     text-overflow ellipsis
@@ -16,3 +17,10 @@
     top 0
     right unquote('calc(' + rem(23) + ' + 1px)')
     left unquote('calc(' + rem(23) + ' + 1px)')
+
+    .text-field_type_2 ~ & {
+      right unquote('calc(' + rem(14) + ' + 1px)')
+      left unquote('calc(' + rem(14) + ' + 1px)')
+    }
+  }
+}

@@ -13,23 +13,18 @@ form.-popup._size_652.container-fluid.form-order-call(action='' method='get' dat
       span.__text Номер вашего телефона
   .-form-row._last
     .__agreement
-      +checkbox(name='agreement' required) Я&nbsp;ознакомлен с&nbsp;#[+a(pages.confidentiality.url) политикой конфиденциальности] и&nbsp;даю согласие на&nbsp;обработку своих персональных данных.
+      +checkbox(name='agreement' required) Я&nbsp;ознакомлен с&nbsp;#[+a(pages.confidentiality.url)(target='_blank') политикой конфиденциальности] #[br]и&nbsp;даю #[+a()(target='_blank') согласие на&nbsp;обработку своих персональных данных].
     button.__btn-submit.btn.btn_4(type='submit' data-toggle='submit') Отправить
 
   script.
       $(function () {
           $('.form-order-call').parsley().on('field:validated', function () {
               var ok = $('.parsley-error').length === 0;
-          })
-          .on('form:submit', function (el) {
+          }).on('form:submit', function (el) {
               var $form = el.$element;
               $form.find('[data-toggle="submit"]').attr('disabled', true);
               var data = $form.serialize();
               var responseMsg = 'Ваше сообщение успешно отправлено, мы Вам перезвоним!';
-
-              //console.log(el);
-              //console.log($form.attr('action'));
-              //console.log($form.serialize());
 
               $.ajax({
                   type: $form.attr('method'),

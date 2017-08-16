@@ -15,23 +15,20 @@
         <input type="checkbox" name="agreement" required="required" class="checkbox__input">
         <span class="checkbox__icon glyphicon glyphicon-correct-symbol"></span>
         <span class="checkbox__label">Я&nbsp;ознакомлен с&nbsp;
-          <a href="confidentiality.html">политикой конфиденциальности</a> и&nbsp;даю согласие на&nbsp;обработку своих персональных данных.</span>
+          <a href="confidentiality.html" target="_blank">политикой конфиденциальности</a>
+          <br>и&nbsp;даю
+          <a href="javascript:;" target="_blank">согласие на&nbsp;обработку своих персональных данных</a>.</span>
       </label>
     </div>
     <button class="form-row__btn-submit btn btn_4" type="submit" data-toggle="submit">Отправить</button>
   </div><script>$(function () {
     $('.form-order-call').parsley().on('field:validated', function () {
         var ok = $('.parsley-error').length === 0;
-    })
-    .on('form:submit', function (el) {
+    }).on('form:submit', function (el) {
         var $form = el.$element;
         $form.find('[data-toggle="submit"]').attr('disabled', true);
         var data = $form.serialize();
         var responseMsg = 'Ваше сообщение успешно отправлено, мы Вам перезвоним!';
-
-        //console.log(el);
-        //console.log($form.attr('action'));
-        //console.log($form.serialize());
 
         $.ajax({
             type: $form.attr('method'),

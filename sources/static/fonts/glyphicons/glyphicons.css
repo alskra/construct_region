@@ -43,10 +43,18 @@
   content: "\E005";
 }
 
-.glyphicon-menu-lines:before {
+.glyphicon-m:before {
   content: "\E006";
 }
 
-.glyphicon-right-angle-bracket:before {
+.glyphicon-menu-lines:before {
   content: "\E007";
+}
+
+.glyphicon-placeholder-for-map:before {
+  content: "\E008";
+}
+
+.glyphicon-right-angle-bracket:before {
+  content: "\E009";
 }

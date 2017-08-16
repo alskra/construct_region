@@ -1,21 +1,41 @@
-.contacts
-  text-align center
+.contacts {
+  line-height inherit
+  margin 0 0 rem(40)
+  p {
+    &:last-child, &:last-of-type {
+      margin 0
+    }
+  }
 
-  a
-    color $headings-color
+  a {
+    color inherit
     text-decoration none
-    &:hover, &:focus
+    &:hover, &:focus {
       color $blue-1
       text-decoration none
+    }
+  }
 
-  &__section
-    margin-bottom 0.5rem
+  &__title {
+    font-size rem(18)
+    font-weight bold
+    line-height 1.56
+    text-align left
+    color $black-1
+    margin 0 0 rem(14)
+  }
 
-  &__title
-    color $blue-1
-    margin-bottom 0.5em
+  &__time-work {
+    font-size rem(14)
+    margin rem(14) 0 0
+  }
 
-  @media (min-width $screen-md-min)
-    &__section
-      margin-bottom 3rem
+  &__tel {
+    font-size rem(22)
+  }
+
+  @media (min-width $screen-md-min) {
+    margin 0 0 rem(70)
+  }
+}
 
