@@ -1,5 +1,6 @@
 [
   "sources/static/fonts/google-fonts/google-fonts.css",
+  "sources/static/fonts/Raleway/Raleway.css",
   "sources/static/fonts/glyphicons/glyphicons.css",
   "sources/components/bootstrap/css/index.styl",
   "sources/components/img-object-fit/img-object-fit.css",

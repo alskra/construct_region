@@ -3,5 +3,6 @@ $(function () {
         e.preventDefault();
         $(this).toggleClass('glyphicon-menu-lines glyphicon-cancel');
         $('.header__panel').fadeToggle(200);
+        $('html').toggleClass('opened-panel');
     });
 });

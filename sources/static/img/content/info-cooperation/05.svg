@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="113px" height="113px" viewBox="0 0 113 113" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>6A42B1C8-5599-4CE7-9258-17361346402B</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="05_Construct_Region_main" transform="translate(-1383.000000, -1246.000000)">
+            <g id="txt" transform="translate(0.000000, 1101.000000)">
+                <g id="icon" transform="translate(20.000000, 145.000000)">
+                    <g id="05" transform="translate(1363.000000, 0.000000)">
+                        <rect id="Rectangle-7" stroke="#666666" x="40.5" y="81.5" width="33" height="4" rx="1"></rect>
+                        <circle id="Oval-3" fill="#282828" cx="57" cy="37" r="1"></circle>
+                        <rect id="Rectangle-6" fill="#666666" x="24" y="40" width="66" height="1"></rect>
+                        <path d="M23,81 L91,81 L91,34 C91,32.8954305 90.1045695,32 89,32 L25,32 C23.8954305,32 23,32.8954305 23,34 L23,81 Z" id="Rectangle-5" stroke="#666666" stroke-width="2"></path>
+                        <path d="M18,81 C16.8954305,81 16,81.8954305 16,83 L16,86.5 C16,89.5375661 18.4624339,92 21.5,92 L92.5,92 C95.5375661,92 98,89.5375661 98,86.5 L98,83 C98,81.8954305 97.1045695,81 96,81 L18,81 Z" id="Rectangle-2" stroke="#666666" stroke-width="2"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

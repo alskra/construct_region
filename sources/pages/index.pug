@@ -7,6 +7,7 @@ block variables
 include ../blocks/header/header
 include ../blocks/content/content
 include ../blocks/footer/footer
+include ../blocks/checkbox/checkbox
 
 +doctype(pageTitle)._index
   .-wrapper
@@ -24,10 +25,10 @@ include ../blocks/footer/footer
             .__content.container-fluid
               .__content-inner
                 h2.__title.fadeInDown.animated.
-                  Мы знаем о рекламе в&nbsp;регионах #[strong ВСЕ!]
+                  Мы&nbsp;знаем о&nbsp;рекламе в&nbsp;регионах #[strong ВСЕ!]
                 .__description.fadeInUp.animated
                   p.
-                    Поможем спланировать, оперативно разместить и оценить эффективность рекламной кампании в  регионах — от Калининграда до Камчатки
+                    Поможем спланировать, оперативно разместить и оценить эффективность рекламной кампании в  регионах&nbsp;— от Калининграда до Камчатки
                 +a().__btn.btn.btn_3 #[span.btn__icon.hidden-xs] #[span.btn__label Узнать больше]
           .__item.slick-slide.loading
             img.__img(
@@ -47,4 +48,221 @@ include ../blocks/footer/footer
                 +a().__btn.btn.btn_3 #[span.btn__icon.hidden-xs] #[span.btn__label Узнать больше]
 
         +social-networks().hidden-xs
+      // Section About
+      section.-section-about
+        .-container-fluid
+          h2.-section-about.__title Наше рекламное агентство больше 20&nbsp;лет помогает клиентам открывать новые горизонты
+        .-info-cooperation
+          .-container-fluid
+            h3.-info-cooperation.__title Сотрудничество с&nbsp;нами&nbsp;— это:
+          .__list
+            figure.-info-cooperation.__item
+              .__img-wrap
+                img.__img(src=`${paths.imgContent}/info-cooperation/02.svg` alt='')
+              figcaption.__caption Более 3&nbsp;000 партнеров в&nbsp;регионах России
+            figure.-info-cooperation.__item
+              .__img-wrap
+                img.__img(src=`${paths.imgContent}/info-cooperation/01.svg` alt='')
+              figcaption.__caption Закупка рекламы во&nbsp;всех типах&nbsp;СМИ
+            figure.-info-cooperation.__item
+              .__img-wrap
+                img.__img(src=`${paths.imgContent}/info-cooperation/03@3x.png` alt='')
+              figcaption.__caption Лучшие цены на&nbsp;размещение
+            figure.-info-cooperation.__item
+              .__img-wrap
+                img.__img(src=`${paths.imgContent}/info-cooperation/04.svg` alt='')
+              figcaption.__caption Оценка итогов рекламной кампании и&nbsp;рекомендации
+            figure.-info-cooperation.__item
+              .__img-wrap
+                img.__img(src=`${paths.imgContent}/info-cooperation/05.svg` alt='')
+              figcaption.__caption Качественный медиаанализ
+            figure.-info-cooperation.__item
+              .__img-wrap
+                img.__img(src=`${paths.imgContent}/info-cooperation/06.svg` alt='')
+              figcaption.__caption Индивидуальный подход к&nbsp;каждой кампании
+
+      // Section Service
+      section.-section-service
+        .-container-fluid
+          h2.-section-service.__title Работаем со&nbsp;всеми типами медиа
+        .__list
+          article.__item
+            +a(pages.internet.url).__item-link(title=pages.internet.title)
+              img.__item-img.lazy(
+                data-src=`${paths.imgContent}/section-service/internet.jpg`
+                data-srcset=`${paths.imgContent}/section-service/internet.jpg 1x, ${paths.imgContent}/section-service/internet@2x.jpg 2x, ${paths.imgContent}/section-service/internet@3x.jpg 3x`
+                data-object-fit='cover' onload='objectFit(this)'
+                alt=''
+              )
+              .__item-over
+                h3.__item-title=pages.internet.title
+                span.__item-label Перейти#[span.hidden-xs в&nbsp;услугу]
+          article.__item
+            +a(pages.ad.url).__item-link(title=pages.ad.title)
+              img.__item-img.lazy(
+                data-src=`${paths.imgContent}/section-service/ad.jpg`
+                data-srcset=`${paths.imgContent}/section-service/ad.jpg 1x, ${paths.imgContent}/section-service/ad@2x.jpg 2x, ${paths.imgContent}/section-service/ad@3x.jpg 3x`
+                data-object-fit='cover' onload='objectFit(this)'
+                alt=''
+              )
+              .__item-over
+                h3.__item-title=pages.ad.title
+                span.__item-label Перейти#[span.hidden-xs в&nbsp;услугу]
+          article.__item
+            +a(pages.radio.url).__item-link(title=pages.radio.title)
+              img.__item-img.lazy(
+                data-src=`${paths.imgContent}/section-service/radio.jpg`
+                data-srcset=`${paths.imgContent}/section-service/radio.jpg 1x, ${paths.imgContent}/section-service/radio@2x.jpg 2x, ${paths.imgContent}/section-service/radio@3x.jpg 3x`
+                data-object-fit='cover' onload='objectFit(this)'
+                alt=''
+              )
+              .__item-over
+                h3.__item-title=pages.radio.title
+                span.__item-label Перейти#[span.hidden-xs в&nbsp;услугу]
+          article.__item
+            +a(pages.tv.url).__item-link(title=pages.tv.title)
+              img.__item-img.lazy(
+                data-src=`${paths.imgContent}/section-service/tv.jpg`
+                data-srcset=`${paths.imgContent}/section-service/tv.jpg 1x, ${paths.imgContent}/section-service/tv@2x.jpg 2x, ${paths.imgContent}/section-service/tv@3x.jpg 3x`
+                data-object-fit='cover' onload='objectFit(this)'
+                alt=''
+              )
+              .__item-over
+                h3.__item-title=pages.tv.title
+                span.__item-label Перейти#[span.hidden-xs в&nbsp;услугу]
+          article.__item
+            +a(pages.press.url).__item-link(title=pages.press.title)
+              img.__item-img.lazy(
+                data-src=`${paths.imgContent}/section-service/press.jpg`
+                data-srcset=`${paths.imgContent}/section-service/press.jpg 1x, ${paths.imgContent}/section-service/press@2x.jpg 2x, ${paths.imgContent}/section-service/press@3x.jpg 3x`
+                data-object-fit='cover' onload='objectFit(this)'
+                alt=''
+              )
+              .__item-over
+                h3.__item-title=pages.press.title
+                span.__item-label Перейти#[span.hidden-xs в&nbsp;услугу]
+          // Spacers for align
+          .__item
+          .__item
+          .__item
+          .__item
+          .__item
+
+      // Section Service 2
+      section.-section-service-2
+        .-container-fluid
+          h2.-section-service-2.__title Мы предлагаем
+        .__container
+          ul.__list
+            li.__item Cтратегическое и тактическое медиапланирование
+            li.__item Анализ рынка и конкурентов
+            li.__item Тщательный контроль рекламных кампаний
+            li.__item Качественная оптимизация затрат на рекламные компании
+            li.__item Медиааудит и предоставление аналитики по различным СМИ
+            li.__item Юридическое сопровождение
+
+      // Section Clients
+      section.-section-clients
+        .-container-fluid
+          h2.-section-clients.__title Наши клиенты
+        .-slider-clients
+          .__inner.slick-slider(data-slick='{"autoplay": true, "autoplaySpeed": 10000}')
+            article.__item.slick-slide
+              +a().__item-img-wrap
+                img.__item-img(
+                  width='170'
+                  data-lazy=`${paths.imgContent}/slider-clients/NewYorker.png`
+                  data-lazy-srcset=`${paths.imgContent}/slider-clients/NewYorker.png 1x, ${paths.imgContent}/slider-clients/NewYorker@2x.png 2x, ${paths.imgContent}/slider-clients/NewYorker@3x.png 3x`
+                  alt=''
+                )
+              h3.__item-title
+                +a().__item-link NewYorker
+              p.__item-description Магазин
+            article.__item.slick-slide
+              +a().__item-img-wrap
+                img.__item-img(
+                  width='180'
+                  data-lazy=`${paths.imgContent}/slider-clients/Mascotte.png`
+                  data-lazy-srcset=`${paths.imgContent}/slider-clients/Mascotte.png 1x, ${paths.imgContent}/slider-clients/Mascotte@2x.png 2x, ${paths.imgContent}/slider-clients/Mascotte@3x.png 3x`
+                  alt=''
+                )
+              h3.__item-title
+                +a().__item-link Mascotte
+              p.__item-description Магазин
+            article.__item.slick-slide
+              +a().__item-img-wrap
+                img.__item-img(
+                  width='180'
+                  data-lazy=`${paths.imgContent}/slider-clients/Unichel.png`
+                  data-lazy-srcset=`${paths.imgContent}/slider-clients/Unichel.png 1x, ${paths.imgContent}/slider-clients/Unichel@2x.png 2x, ${paths.imgContent}/slider-clients/Unichel@3x.png 3x`
+                  alt=''
+                )
+              h3.__item-title
+                +a().__item-link Юничел
+              p.__item-description Магазин
+            article.__item.slick-slide
+              +a().__item-img-wrap
+                img.__item-img(
+                  width='140'
+                  data-lazy=`${paths.imgContent}/slider-clients/pec.png`
+                  data-lazy-srcset=`${paths.imgContent}/slider-clients/pec.png 1x, ${paths.imgContent}/slider-clients/pec@2x.png 2x, ${paths.imgContent}/slider-clients/pec@3x.png 3x`
+                  alt=''
+                )
+              h3.__item-title
+                +a().__item-link ПЭК
+              p.__item-description Доставка сборных грузов
+            article.__item.slick-slide
+              +a().__item-img-wrap
+                img.__item-img(
+                  width='180'
+                  data-lazy=`${paths.imgContent}/slider-clients/gp.png`
+                  data-lazy-srcset=`${paths.imgContent}/slider-clients/gp.png 1x, ${paths.imgContent}/slider-clients/gp@2x.png 2x, ${paths.imgContent}/slider-clients/gp@3x.png 3x`
+                  alt=''
+                )
+              h3.__item-title
+                +a().__item-link Газпромбанк
+              p.__item-description Банк
+            article.__item.slick-slide
+              +a().__item-img-wrap
+                img.__item-img(
+                  width='140'
+                  data-lazy=`${paths.imgContent}/slider-clients/leovit.png`
+                  data-lazy-srcset=`${paths.imgContent}/slider-clients/leovit.png 1x, ${paths.imgContent}/slider-clients/leovit@2x.png 2x, ${paths.imgContent}/slider-clients/leovit@3x.png 3x`
+                  alt=''
+                )
+              h3.__item-title
+                +a().__item-link Леовит
+              p.__item-description Здоровье нации
+            article.__item.slick-slide
+              +a().__item-img-wrap
+                img.__item-img(
+                width='180'
+                data-lazy=`${paths.imgContent}/slider-clients/Mascotte.png`
+                data-lazy-srcset=`${paths.imgContent}/slider-clients/Mascotte.png 1x, ${paths.imgContent}/slider-clients/Mascotte@2x.png 2x, ${paths.imgContent}/slider-clients/Mascotte@3x.png 3x`
+                alt=''
+                )
+              h3.__item-title
+                +a().__item-link Mascotte
+              p.__item-description Магазин
+
+      // Section Feedback
+      section.-section-feedback
+        .-container-fluid
+          h2.-section-feedback.__title Появились вопросы? Напишите нам
+          form.-form-feedback(action='' data-parsley-validate="")
+            .-form-row._sm_2
+              label.-form-label
+                input.-text-field(type="text" name="name" required)
+                span.__text Ваше имя
+              label.-form-label
+                input.-text-field(type="email" name="email" required)
+                span.__text Email
+            .-form-row
+              label.-form-label
+                textarea.-text-field._textarea(name="msg" required)
+                span.__text Сообщение
+            .-form-row._last
+              .__agreement
+                +checkbox('agreement', false, true) Я ознакомлен с #[+a(pages.confidentiality.url) политикой конфиденциальности] и даю согласие на обработку своих персональных данных.
+              button.__btn-submit.btn.btn_4 Отправить
     +footer()

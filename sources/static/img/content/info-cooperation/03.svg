@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="113px" height="113px" viewBox="0 0 113 113" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>443F703C-DB8E-4A11-9B6B-2B99D3BA10E4</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="05_Construct_Region_main" transform="translate(-743.000000, -1246.000000)">
+            <g id="txt" transform="translate(0.000000, 1101.000000)">
+                <g id="icon" transform="translate(20.000000, 145.000000)">
+                    <g id="03" transform="translate(723.000000, 0.000000)">
+                        <g id="Group" transform="translate(25.000000, 24.000000)">
+                            <rect id="Rectangle-4" fill="#666666" x="2" y="44" width="60" height="1"></rect>
+                            <rect id="Rectangle-4" fill="#666666" x="43" y="53" width="14" height="1"></rect>
+                            <rect id="Rectangle-3" stroke="#666666" stroke-width="2" x="8" y="8" width="48" height="29"></rect>
+                            <rect id="Rectangle-2" stroke="#666666" stroke-width="2" x="1" y="1" width="62" height="62" rx="3"></rect>
+                        </g>
+                        <circle id="Oval-2" stroke="#666666" stroke-width="2" fill="#FFFFFF" cx="22" cy="58" r="18"></circle>
+                        <text id="₽" font-family=".HelveticaNeueDeskInterface-Regular, .Helvetica Neue DeskInterface" font-size="20" font-weight="normal" fill="#666666">
+                            <tspan x="17" y="64.5">₽</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

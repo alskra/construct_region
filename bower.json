@@ -23,6 +23,7 @@
     "slick-carousel": "",
     "fancybox": "",
     "slideout.js": "",
-    "parsleyjs": ""
+    "parsleyjs": "",
+    "jquery-lazy": ""
   }
 }

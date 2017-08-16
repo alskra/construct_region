@@ -3,13 +3,14 @@
   vertical-align top
   color $text-color
   text-align left
-  height rem(65px)
-  padding 0 rem(18px)
-  background #f2f2f2
-  border 2px solid transparent
+  height rem(49)
+  padding 0 rem(23)
+  background #ffffff
+  border 1px solid transparent
+  border-radius 2px
   transition $transition-base
   &::placeholder
-    color #9e9e9e
+    color #b8b9bb
   &,
   &:active,
   &.active
@@ -20,7 +21,7 @@
       border-color $blue-1
       &~.form-label__text
         font-size 0.75rem
-        line-height 2em
+        line-height 1.6em
   &:active,
   &.active
     outline 0
@@ -29,10 +30,10 @@
   fieldset[disabled] &
     disabled()
 
-  &.required
+  &[required], &.required
     &~.form-label__text
       &:after
-        content '\00A0*'
+        //content '\00A0*'
         color $blue-1
 
   &.error
@@ -42,9 +43,9 @@
   &_textarea
     resize vertical
     overflow-y auto
-    min-height rem(150px)
-    padding-top rem(15px)
-    padding-bottom rem(15px)
+    min-height rem(49)
+    padding-top rem(8)
+    padding-bottom rem(8)
 
   &_width_100
     display block
@@ -53,4 +54,4 @@
   &_has-val
     &~.form-label__text
       font-size 0.75rem
-      line-height 2em
+      line-height 1.6em

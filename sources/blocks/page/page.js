@@ -9,3 +9,5 @@ var $screenLgMin = $screenLg/$fontSizeRoot + 'em'; console.log('$screenLgMin = '
 var $screenXsMax = ($screenSm - 1)/$fontSizeRoot + 'em'; console.log('$screenXsMax = ' + $screenXsMax);
 var $screenSmMax = ($screenMd - 1)/$fontSizeRoot + 'em'; console.log('$screenSmMax = ' + $screenSmMax);
 var $screenMdMax = ($screenLg - 1)/$fontSizeRoot + 'em'; console.log('$screenMdMax = ' + $screenMdMax);
+
+$('.lazy').Lazy();

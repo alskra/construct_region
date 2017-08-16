@@ -1,6 +1,6 @@
-mixin checkbox(name, checked)
+mixin checkbox(name, checked, req)
   label.-checkbox&attributes(attributes)
-    input.__input(type='checkbox' name=name checked=checked)
-    span.__icon.icon-check-1
+    input.__input(type='checkbox' name=name checked=checked required=req)
+    span.__icon.glyphicon.glyphicon-correct-symbol
     span.__label
       block

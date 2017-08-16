@@ -31,10 +31,22 @@
   content: "\E002";
 }
 
-.glyphicon-facebook:before {
+.glyphicon-correct-symbol:before {
   content: "\E003";
 }
 
-.glyphicon-menu-lines:before {
+.glyphicon-facebook:before {
   content: "\E004";
+}
+
+.glyphicon-left-angle-bracket:before {
+  content: "\E005";
+}
+
+.glyphicon-menu-lines:before {
+  content: "\E006";
+}
+
+.glyphicon-right-angle-bracket:before {
+  content: "\E007";
 }

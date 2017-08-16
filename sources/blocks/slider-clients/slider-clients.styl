@@ -1,0 +1,99 @@
+.slider-clients {
+  max-width rem(1710)
+  position relative
+  margin 0 auto
+  .slick-list {
+    margin 0 0 0 -1px
+  }
+  .slick-track {
+    display flex
+    &:before, &:after {
+      display none
+    }
+  }
+  .slick-prev, .slick-next {
+    font-size rem(21)
+    line-height 1em
+    color #6f6f6f
+    transition $transition-base
+    position absolute
+    top 50%
+    margin rem(-10) 0
+    &:hover, &:focus {
+      color $red-1
+    }
+  }
+  .slick-prev {
+    left rem(15)
+  }
+  .slick-next {
+    right rem(15)
+  }
+
+  &__inner {
+    overflow hidden
+    position static
+    margin 0 rem(42)
+  }
+
+  &__item {
+    flex none
+    padding 0 rem(30) rem(20)
+    border-left 1px solid #e3e3e3
+
+    &-img-wrap {
+      display flex
+      justify-content center
+      align-items center
+      width rem(196)
+      max-width 100%
+      height rem(196)
+      position relative
+      margin 0 auto rem(20)
+      &:hover, &:focus {
+        & ~ {r}__item-title {r}__item-link {
+          color $red-1
+        }
+      }
+    }
+
+    &-img {
+      display block
+      max-width 100%
+      max-height 100%
+    }
+
+    &-title {
+      font-size rem(18)
+      font-weight 600
+      line-height 1.17
+      text-align left
+      color #000000
+      margin 0 0 rem(8)
+    }
+
+    &-link {
+      display block
+      color inherit
+      text-decoration none
+      &:hover, &:focus {
+        color $red-1
+        text-decoration none
+      }
+    }
+
+    &-description {
+      font-size 16px
+      line-height 1.31
+      text-align left
+      color #9f9f9f
+      margin 0
+    }
+  }
+
+  @media (min-width $screen-md-min) {
+    &__inner {
+      margin 0 rem(75)
+    }
+  }
+}

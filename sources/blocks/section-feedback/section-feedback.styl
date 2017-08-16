@@ -1,0 +1,27 @@
+.section-feedback {
+  color #ffffff
+  padding rem(40) 0
+  background url("bg-feedback.jpg") no-repeat 50% 0/cover
+
+  &__title {
+    font-size rem(28)
+    line-height 1.66
+    letter-spacing rem(-0.2)
+    text-align center
+    color #ffffff
+    margin 0 0 (56/38)em
+  }
+
+  @media $media-retina-2 {
+    background-image url("bg-feedback@2x.jpg")
+  }
+
+
+  @media (min-width $screen-md-min) {
+    padding rem(120) 0
+
+    &__title {
+      font-size rem(38)
+    }
+  }
+}

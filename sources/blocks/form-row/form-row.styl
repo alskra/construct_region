@@ -1,2 +1,60 @@
-.form-row
-  margin-bottom rem(20px)
+.form-row {
+  margin 0 0 rem(28)
+  .form-label {
+    & ~ .form-label {
+      margin rem(28) 0 0
+    }
+  }
+
+  &__agreement {
+    margin-bottom rem(28)
+    .checkbox {
+      color #b6b6b6
+    }
+    a {
+      color white
+    }
+  }
+
+  &_last {
+    text-align center
+    margin rem(42) 0 0
+  }
+
+
+
+
+
+
+  @media (min-width $screen-sm-min) {
+    &__agreement {
+      margin 0
+    }
+
+    &_sm {
+      &_2 {
+        display flex
+        .form-label {
+          &:nth-child(1) {
+            width uq('calc(50% - ' + rem(11) + ')')
+            margin 0 rem(11) 0 0
+          }
+          &:nth-child(2) {
+            width uq('calc(50% - ' + rem(11) + ')')
+            margin 0 0 0 rem(11)
+          }
+        }
+      }
+    }
+
+    &_last {
+      display flex
+      align-items flex-start
+      text-align left
+      & {r}__btn-submit {
+        flex none
+        margin 0 0 0 rem(150)
+      }
+    }
+  }
+}
