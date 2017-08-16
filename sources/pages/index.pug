@@ -249,7 +249,7 @@ include ../blocks/checkbox/checkbox
       section.-section-feedback
         .-container-fluid
           h2.-section-feedback.__title Появились вопросы? Напишите нам
-          form.-form-feedback(action='' data-parsley-validate="")
+          form.-form-feedback(action='' method='get' data-parsley-validate="")
             .-form-row._sm_2
               label.-form-label
                 input.-text-field(type="text" name="name" required)
@@ -263,6 +263,6 @@ include ../blocks/checkbox/checkbox
                 span.__text Сообщение
             .-form-row._last
               .__agreement
-                +checkbox('agreement', false, true) Я ознакомлен с #[+a(pages.confidentiality.url) политикой конфиденциальности] и даю согласие на обработку своих персональных данных.
-              button.__btn-submit.btn.btn_4 Отправить
+                +checkbox(name='agreement' required) Я&nbsp;ознакомлен с&nbsp;#[+a(pages.confidentiality.url) политикой конфиденциальности] и&nbsp;даю согласие на&nbsp;обработку своих персональных данных.
+              button.__btn-submit.btn.btn_4(type='submit' data-toggle='submit') Отправить
     +footer()

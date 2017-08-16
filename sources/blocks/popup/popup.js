@@ -1,29 +1,9 @@
 $.fancybox.defaults.hash = false;
+$.fancybox.defaults.touch = false;
+$.fancybox.defaults.btnTpl.smallBtn = '<button data-fancybox-close class="btn popup__btn-close glyphicon glyphicon-cancel" title="Закрыть"></button>';
 
 $(function () {
-    $("[data-fancybox]").fancybox({
-        smallBtn : 'auto',
-        autoFocus : false,
-        btnTpl : {
-            slideShow  : '<button data-fancybox-play class="fancybox-button fancybox-button--play hide" title="{{PLAY_START}}"></button>',
-            fullScreen : '<button data-fancybox-fullscreen class="fancybox-button fancybox-button--fullscreen hide" title="{{FULL_SCREEN}}"></button>',
-            thumbs     : '<button data-fancybox-thumbs class="fancybox-button fancybox-button--thumbs hide" title="{{THUMBS}}"></button>',
-            close      : '<button data-fancybox-close class="fancybox-button fancybox-button--close" title="{{CLOSE}}"></button>',
-
-            // This small close button will be appended to your html/inline/ajax content by default,
-            // if "smallBtn" option is not set to false
-            smallBtn   : '<button data-fancybox-close class="btn popup__close glyphicon glyphicon-close-2" title="{{CLOSE}}"></button>'
-        },
-        keyboard: true,
-        arrows: true,
-        touch: true,
-        onInit: function () {
-
-        },
-        beforeClose: function () {
-
-        }
-    });
+    //$("[data-fancybox]").fancybox();
 
     $("[data-fancybox--single]").fancybox({
         smallBtn : false,

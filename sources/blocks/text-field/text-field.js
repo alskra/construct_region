@@ -16,6 +16,11 @@ $(function () {
 $(document).ajaxComplete(function() {
     hasVal();
     $('[data-mask]').each(function () {
-        $(this).mask($(this).data('mask'));
+        if (!$(this).hasClass('init-mask')) {
+            $(this).mask($(this).data('mask')).addClass('init-mask');
+        }
+    });
+    $('[data-parsley-validate]').each(function () {
+        $(this).parsley();
     });
 });

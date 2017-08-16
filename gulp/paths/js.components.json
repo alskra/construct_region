@@ -3,6 +3,7 @@
   "bower_components/jquery/dist/jquery.js",
   "bower_components/jquery-touch-events/src/jquery.mobile-events.js",
   "sources/components/slick-carousel/add-on/slick.js",
+  "bower_components/jquery-mask-plugin/dist/jquery.mask.js",
   "bower_components/parsleyjs/dist/parsley.js",
   "bower_components/parsleyjs/dist/i18n/ru.js",
   "bower_components/parsleyjs/dist/i18n/ru.extra.js",

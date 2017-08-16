@@ -32,20 +32,21 @@
 
 // fancybox
 .fancybox-bg {
-  background white
+  background #000000
+  .fancybox-is-open &{
+    opacity 0.6
+  }
 }
 
 .fancybox-slide {
   white-space nowrap
-  > *:not(.fancybox-loading) {
+  padding ($grid-gutter-width/2)
+  > * {
     white-space normal
-    background-color white
-    box-shadow 0 5px 29px rgba(0, 0, 0, 0.12)
-    margin 0
   }
 
   @media (min-width $screen-sm-min) {
-    padding $grid-gutter-width
+    //padding $grid-gutter-width
   }
 }
 

@@ -1,5 +1,5 @@
-.checkbox
-  display inline-flex
+.checkbox {
+  display inline-block
   vertical-align top
   align-items flex-start
   font-size rem(16)
@@ -8,8 +8,7 @@
   position relative
   margin-left rem(43)
 
-  &__icon
-    flex none
+  &__icon {
     display flex
     justify-content center
     align-items center
@@ -20,30 +19,45 @@
     top (28/16/2)em
     left rem(-43)
     margin rem(-14) 0
-    border-radius 2px
+    border-radius rem(2)
     background-color #fefefe
     border 1px solid #d8d8d8
     cursor pointer
     transition $transition-base
-    &:before
+    &:before {
       display none
       font-size rem(14)
       line-height 1em
+    }
+  }
 
-  &__label
-    flex 1 1 auto
-    overflow hidden
+  &__label {
+    display block
+  }
 
-  &__input
+  &__input {
     clip rect(0, 0, 0, 0)
     position absolute
     width 0
     height 0
-    &:focus
-      & + {r}__icon
+    &:focus {
+      & ~ {r}__icon {
         border-color $blue-1
-    &:checked
-      & + {r}__icon
+      }
+    }
+    &:checked {
+      & ~ {r}__icon {
         &:before {
           display block
         }
+      }
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+      & ~ {r}__icon {
+        disabled()
+      }
+    }
+  }
+}

@@ -6,5 +6,6 @@
   "sources/components/img-object-fit/img-object-fit.css",
   "bower_components/slick-carousel/slick/slick.css",
   "bower_components/fancybox/dist/jquery.fancybox.css",
-  "sources/components/animate.css/animate.css"
+  "sources/components/animate.css/animate.css",
+  "sources/blocks/parsley/parsley.styl"
 ]

@@ -7,7 +7,7 @@
   padding 0 rem(23)
   background #ffffff
   border 1px solid transparent
-  border-radius 2px
+  border-radius rem(2)
   transition $transition-base
   &::placeholder
     color #b8b9bb
@@ -33,25 +33,27 @@
   &[required], &.required
     &~.form-label__text
       &:after
-        //content '\00A0*'
-        color $blue-1
+        content '\00A0*'
+        color $red-2
 
-  &.error
-    background #ffe3e4
-    border-color $red-1
+  &.error, &.parsley-error
+    //background #ffe3e4
+    border-color $red-2
 
   &_textarea
     resize vertical
     overflow-y auto
-    min-height rem(49)
+    height rem(49)
     padding-top rem(8)
     padding-bottom rem(8)
-
-  &_width_100
-    display block
-    width 100%
 
   &_has-val
     &~.form-label__text
       font-size 0.75rem
       line-height 1.6em
+
+  &_type_2 {
+    background-color #fefefe
+    border-color #d8d8d8
+    border-radius 0
+  }
