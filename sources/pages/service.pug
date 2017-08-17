@@ -1,0 +1,92 @@
+include ../blocks/doctype/doctype
+
+block variables
+  -
+    var pageTitle = pages.service.title, pageUrls = [pages.service.url];
+
+include ../blocks/header/header
+include ../blocks/content/content
+include ../blocks/footer/footer
+
++doctype(pageTitle)
+  .-wrapper
+    +header()
+    +content()
+      section.-section._service
+        header.__header
+          .-container-fluid
+            h1.-section.__title Услуги
+        .-service-list
+          .-container-fluid
+            .-row
+              article.-service-item
+                +a(pages.tv.url).__inner(title=pages.tv.title)
+                  img.__img.lazy(
+                    data-src=`${paths.imgContent}/service/shutterstock_145681991.jpg`
+                    data-srcset=`${paths.imgContent}/service/shutterstock_145681991.jpg 1x, ${paths.imgContent}/service/shutterstock_145681991@2x.jpg 2x`
+                    data-object-fit='cover' onload='objectFit(this)'
+                    alt=''
+                  )
+                  .__content
+                    h2.__title Телевидение
+                    .__description.hidden-xs
+                      p.
+                        Реклама на ТВ - самый массовый
+                        и эффективный вид рекламы.
+                        Вашу рекламу увидят.
+              article.-service-item
+                +a(pages.ad.url).__inner(title=pages.ad.title)
+                  img.__img.lazy(
+                    data-src=`${paths.imgContent}/service/shutterstock_344732144.jpg`
+                    data-srcset=`${paths.imgContent}/service/shutterstock_344732144.jpg 1x, ${paths.imgContent}/service/shutterstock_344732144@2x.jpg 2x`
+                    data-object-fit='cover' onload='objectFit(this)'
+                    alt=''
+                  )
+                  .__content
+                    h2.__title Наружная реклама
+                    .__description.hidden-xs
+                      p.
+                        Медианоситель с огромным выбором форматов. Вашу рекламу встретят на улице
+              article.-service-item
+                +a(pages.radio.url).__inner(title=pages.radio.title)
+                  img.__img.lazy(
+                    data-src=`${paths.imgContent}/service/shutterstock_521956912.jpg`
+                    data-srcset=`${paths.imgContent}/service/shutterstock_521956912.jpg 1x, ${paths.imgContent}/service/shutterstock_521956912@2x.jpg 2x`
+                    data-object-fit='cover' onload='objectFit(this)'
+                    alt=''
+                  )
+                  .__content
+                    h2.__title Радио
+                    .__description.hidden-xs
+                      p.
+                        Самое оперативное медиа.
+                        Вашу рекламу услышат
+              article.-service-item
+                +a(pages.internet.url).__inner(title=pages.internet.title)
+                  img.__img.lazy(
+                    data-src=`${paths.imgContent}/service/shutterstock_452233021.jpg`
+                    data-srcset=`${paths.imgContent}/service/shutterstock_452233021.jpg 1x, ${paths.imgContent}/service/shutterstock_452233021@2x.jpg 2x`
+                    data-object-fit='cover' onload='objectFit(this)'
+                    alt=''
+                  )
+                  .__content
+                    h2.__title Интернет
+                    .__description.hidden-xs
+                      p.
+                        Прозрачное и актуальное медиа.
+                        Ваша реклама будет всегда под рукой
+              article.-service-item
+                +a(pages.internet.url).__inner(title=pages.internet.title)
+                  img.__img.lazy(
+                    data-src=`${paths.imgContent}/service/shutterstock_540952534.jpg`
+                    data-srcset=`${paths.imgContent}/service/shutterstock_540952534.jpg 1x, ${paths.imgContent}/service/shutterstock_540952534@2x.jpg 2x`
+                    data-object-fit='cover' onload='objectFit(this)'
+                    alt=''
+                  )
+                  .__content
+                    h2.__title Пресса
+                    .__description.hidden-xs
+                      p.
+                        Печать обеспечивает длительное внимание к рекламному сообщению.
+                        Вашу рекламу возьмут с собой
+    +footer()

@@ -1,0 +1,23 @@
+.service-list {
+  .container-fluid {
+    max-width rem(480)
+  }
+  .row {
+    margin-left rem(-10)
+    margin-right rem(-10)
+  }
+
+  @media (min-width $screen-sm-min) {
+    .container-fluid {
+      max-width rem($screen-lg)
+    }
+  }
+
+  @media (min-width em-root(1440)) {
+    .container-fluid {
+      max-width rem(1440)
+      padding-left rem(40)
+      padding-right rem(40)
+    }
+  }
+}

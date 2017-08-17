@@ -1,63 +1,96 @@
-.service-item
-  text-align center
-  color #9e9e9e
-  p
-    display inline
+.service-item {
+  flex none
+  width uq('calc(100% - ' + rem(20) + ')')
+  color #ffffff
+  border-radius rem(4)
+  margin 0 rem(10) rem(20)
+  p {
+    &:last-child {
+      margin 0
+    }
+  }
 
-  &__img-wrap
+  &__inner {
     display block
-    overflow hidden
-    padding-top percentage(185/295)
+    padding-top percentage(336/670)
     position relative
-    margin-bottom rem(26px)
-    &:before
-      display flex
-      justify-content center
-      align-items center
-      color white
-      font-size rem(37px)
-      line-height 1em
-      background rgba($blue-1, 0.9)
-      transition $transition-base
-      opacity 0
-      position absolute
-      top rem(20px)
-      right rem(20px)
-      bottom rem(20px)
-      left rem(20px)
-      z-index 1
-    &:hover, &:focus
-      &:before
-        opacity 1
-      &~{r}__title {r}__title-link
-        color $blue-1
+    background #30303a
+    border-radius inherit
+    &, &:hover, &:focus {
+      color inherit
+      text-decoration none
+    }
+  }
 
-  &__img
+  &__img {
+    border-radius inherit
+    opacity 0.4
     position absolute
     top 0
     left 0
+  }
 
-  &__title
-    overflow hidden
-    color #2c2c2c
-    font-weight 900
-    font-size rem(20px)
+  &__content {
+    padding percentage(150/670) percentage(50/670) percentage(30/670) percentage(50/670)
+    position absolute
+    top 0
+    right 0
+    bottom 0
+    left 0
+    z-index 1
+  }
+
+  &__title {
+    display inline-block
+    vertical-align top
+    font-size rem(20)
+    font-weight bold
     line-height 1.25em
-    text-transform uppercase
-    max-height 1.25em*2
-    line-clamp 2
-    margin 0 0 0.5em
+    text-align left
+    color #ffffff
+    max-width 100%
+    border-bottom 1px solid rgba(white, 0.4)
+    text-overflow(ellipsis)
+    margin 0 0 rem(15)
+  }
 
-  &__title-link
-    display block
-    color inherit
-    text-decoration none
-    &:hover, &:focus
-      color $blue-1
-      text-decoration none
-
-  &__description
+  &__description {
     overflow hidden
-    line-height ($line-height-base)em
-    max-height ($line-height-base)em*3
-    line-clamp 3
+    font-size rem(14)
+    line-height 1.56em
+    max-height 1.56em*2
+    line-clamp(2)
+  }
+
+
+  @media (min-width $screen-sm-min) {
+    width uq('calc(50% - ' + rem(20) + ')')
+    &:first-child {
+      width uq('calc(100% - ' + rem(20) + ')')
+      & {r}__inner {
+        padding-top percentage(464/1360)
+      }
+
+      & {r}__content {
+        padding percentage(167/1360) percentage(50/1360) percentage(30/1360) uq('calc(50% + ' + rem(55) + ')')
+      }
+    }
+  }
+
+  @media (min-width $screen-md-min) {
+    & {r}__title {
+      font-size rem(38)
+    }
+
+    & {r}__description {
+      font-size rem(18)
+    }
+  }
+
+  @media (min-width $screen-lg-min) {
+    & {r}__description {
+      max-height 1.56em*3
+      line-clamp(3)
+    }
+  }
+}
