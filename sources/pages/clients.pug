@@ -1,0 +1,99 @@
+include ../blocks/doctype/doctype
+
+block variables
+  -
+    var pageTitle = pages.service.title, pageUrls = [pages.service.url];
+
+include ../blocks/header/header
+include ../blocks/content/content
+include ../blocks/footer/footer
+
++doctype(pageTitle)
+  .-wrapper
+    +header()
+    +content()
+      section.-section._clients
+        header.__header
+          .-container-fluid
+            h1.-section.__title Клиенты
+        .-clients-list
+          .-container-fluid
+            .-row
+              article.-client-item
+                +a().__img-wrap
+                  img.__img.lazy(
+                  data-src=`${paths.imgContent}/clients/2.jpg`
+                  data-srcset=`${paths.imgContent}/clients/2.jpg 1x, ${paths.imgContent}/service/2.jpg 2x, ${paths.imgContent}/service/2.jpg 3x`
+                  alt=''
+                  )
+                h2.__title
+                  +a().__link NewYorker
+                p.__description Магазин Одежды
+              article.-client-item
+                +a().__img-wrap
+                  img.__img.lazy(
+                  data-src=`${paths.imgContent}/clients/1.jpg`
+                  data-srcset=`${paths.imgContent}/clients/1.jpg 1x, ${paths.imgContent}/service/1.jpg 2x, ${paths.imgContent}/service/1.jpg 3x`
+                  alt=''
+                  )
+                h2.__title
+                  +a().__link Mascotte
+                p.__description Магазин Обуви
+              article.-client-item
+                +a().__img-wrap
+                  img.__img.lazy(
+                  data-src=`${paths.imgContent}/clients/3.jpg`
+                  data-srcset=`${paths.imgContent}/clients/3.jpg 1x, ${paths.imgContent}/service/3.jpg 2x, ${paths.imgContent}/service/3.jpg 3x`
+                  alt=''
+                  )
+                h2.__title
+                  +a().__link Юничел
+                p.__description Производитель Обуви
+              article.-client-item
+                +a().__img-wrap
+                  img.__img.lazy(
+                  data-src=`${paths.imgContent}/clients/4.jpg`
+                  data-srcset=`${paths.imgContent}/clients/4.jpg 1x, ${paths.imgContent}/service/4.jpg 2x, ${paths.imgContent}/service/4.jpg 3x`
+                  alt=''
+                  )
+                h2.__title
+                  +a().__link ПЭК
+                p.__description Доставка Сборных Грузов
+              article.-client-item
+                +a().__img-wrap
+                  img.__img.lazy(
+                  data-src=`${paths.imgContent}/clients/5.jpg`
+                  data-srcset=`${paths.imgContent}/clients/5.jpg 1x, ${paths.imgContent}/service/5.jpg 2x, ${paths.imgContent}/service/5.jpg 3x`
+                  alt=''
+                  )
+                h2.__title
+                  +a().__link Газпромбанк
+                p.__description Банк
+              article.-client-item
+                +a().__img-wrap
+                  img.__img.lazy(
+                  data-src=`${paths.imgContent}/clients/6.jpg`
+                  data-srcset=`${paths.imgContent}/clients/6.jpg 1x, ${paths.imgContent}/service/6.jpg 2x, ${paths.imgContent}/service/6.jpg 3x`
+                  alt=''
+                  )
+                h2.__title
+                  +a().__link Леовит
+                p.__description Продукты для Похудения
+              article.-client-item
+                +a().__img-wrap
+                  img.__img.lazy(
+                  data-src=`${paths.imgContent}/clients/7.jpg`
+                  data-srcset=`${paths.imgContent}/clients/7.jpg 1x, ${paths.imgContent}/service/7.jpg 2x, ${paths.imgContent}/service/7.jpg 3x`
+                  alt=''
+                  )
+                h2.__title
+                  +a().__link Supra
+                p.__description Техника
+
+              // Spacers for align
+              .-client-item
+              .-client-item
+              .-client-item
+              .-client-item
+              .-client-item
+    +footer()
