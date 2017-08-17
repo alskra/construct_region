@@ -1,0 +1,109 @@
+include ../blocks/doctype/doctype
+
+block variables
+  -
+    var pageTitle = pages.team.title, pageUrls = [pages.about.url, pages.history.url];
+
+include ../blocks/header/header
+include ../blocks/content/content
+include ../blocks/footer/footer
+
++doctype(pageTitle)
+  .-wrapper
+    +header()
+    +content()
+      section.-section._history
+        header.__header
+          .-container-fluid
+            h1.-section.__title История агентства
+        .-history-list
+          .-container-fluid
+              article.-history-item
+                header.__header
+                  .__year 1997
+                .__content
+                  .__who
+                    .__who-img
+                      img.lazy(
+                        data-src=`${paths.imgContent}/history/ivan.jpg`
+                        data-srcset=`${paths.imgContent}/history/ivan.jpg 1x, ${paths.imgContent}/history/ivan@2x.jpg 2x, ${paths.imgContent}/history/ivan@3x.jpg 3x`
+                        alt=''
+                      )
+                    .__who-info
+                      p.__who-title Иван Таврин
+                      p.__who-descr Сооснователь компании
+                  h2.__event-title Год рождения агентства «Констракт-регион»
+                  .__event-description
+                    p.
+                      Его основатель — известный российский медиаменеджер Иван Таврин. Команда агентства стала первой в стране, кто занялся размещением рекламы на региональном ТВ
+              article.-history-item
+                header.__header
+                  .__year 1998
+                .__content
+                  .__who
+                    .__who-img
+                      img.lazy(
+                        data-src=`${paths.imgContent}/history/w.jpg`
+                        data-srcset=`${paths.imgContent}/history/w.jpg 1x, ${paths.imgContent}/history/w@2x.jpg 2x, ${paths.imgContent}/history/w@3x.jpg 3x`
+                        alt=''
+                      )
+                    .__who-info
+                      p.__who-title Wimm Bill Dann
+                      p.__who-descr Компания
+                  h2.__event-title Первый крупный контракт
+                  .__event-description
+                    p.
+                      Первый крупный контракт с компанией Wimm Bill Dann
+                      и начало сотрудничества со всеми международными группами агентств по размещению рекламы в регионах
+              article.-history-item
+                header.__header
+                  .__year 2001
+                .__content
+                  .__event-description
+                    p.
+                      Начало работы по размещению наружной рекламы
+                      и рекламы в прессе
+              article.-history-item
+                header.__header
+                  .__year 2001
+                .__content
+                  .__event-description
+                    p.
+                      Запуск работы по размещению рекламы на радио. География работы и количество партнеров растут
+              article.-history-item
+                header.__header
+                  .__year 2004
+                .__content
+                  .__event-description
+                    p.
+                      Начало сотрудничества с одним из самых крупных
+                      региональных рекламодателей — сотовым оператором
+                      «Теле2»
+              article.-history-item
+                header.__header
+                  .__year 2011
+                .__content
+                  .__event-description
+                    p.
+                      В работе агентства открыто направление интернет-рекламы
+              article.-history-item
+                header.__header
+                  .__year 2017
+                .__content
+                  .__who
+                    .__who-img
+                      img.lazy(
+                        data-src=`${paths.imgContent}/history/ivan.jpg`
+                        data-srcset=`${paths.imgContent}/history/ivan.jpg 1x, ${paths.imgContent}/history/ivan@2x.jpg 2x, ${paths.imgContent}/history/ivan@3x.jpg 3x`
+                        alt=''
+                      )
+                    .__who-info
+                      p.__who-title Иван Таврин
+                      p.__who-descr Сооснователь компании
+                  h2.__event-title «Констракт-регион» рекламное агентство с опытом работы 20 лет
+                  .__event-description
+                    p.
+                      В настоящее время у нас более 3 000 партнеров в регио-нах и множество клиентов, которые возвращаются к нам за размещением рекламы снова и снова. Ежемесячно наши специалисты размещают около 150 кампаний раз-личной степени сложности на территории от Калинин-града до Петропавловска-Камчатского.
+
+
+    +footer()

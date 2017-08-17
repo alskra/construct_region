@@ -1,0 +1,25 @@
+include ../blocks/doctype/doctype
+
+block variables
+  -
+    var pageTitle = pages.team.title, pageUrls = [pages.about.url, pages.team.url];
+
+include ../blocks/header/header
+include ../blocks/content/content
+include ../blocks/footer/footer
+
++doctype(pageTitle)
+  .-wrapper
+    +header()
+    +content()
+      section.-section._team
+        header.__header
+          .-container-fluid
+            h1.-section.__title Наша команда
+        .-team-list
+          .-container-fluid
+            .-row
+              .-col-xs-12.col-sm-6.col-md-3
+                article.-team-list.__item
+
+    +footer()
