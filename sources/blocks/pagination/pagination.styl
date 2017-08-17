@@ -1,21 +1,40 @@
-.pagination
-  text-align center
-  margin 40px 0
-
-  &__item
+.pagination {
+  display flex
+  flex-wrap wrap
+  margin 0 rem(-15) rem(15) 0
+  &__item {
+    flex none
+    min-width rem(49)
+    font-size rem(18)
+    font-weight bold
+    line-height 1.17em
     text-align center
-    color #afafaf
+    color $black-1
     text-decoration none
-    font-size rem-calc(20)
-    font-weight 400
-    line-height rem-calc(45)
-    min-width rem-calc(45)
-    height rem-calc(45)
-    padding 0 8px
-    margin 0 5px
-    background-color #f3f3f3
-    &:hover, &:focus, &_current
-      color white
-      background $green-1
-    &_current
+    padding rem(13) rem(5)
+    border-radius rem(2)
+    background-color #ffffff
+    border solid 1px transparent
+    transition $transition-base
+    margin 0 rem(15) rem(15) 0
+    &:hover, &:focus {
+      color $black-1
+      text-decoration none
+      border-color #ff0000
+    }
+
+    &_current {
       cursor default
+      &, &:hover, &:focus {
+        color #999999
+        border-color transparent
+      }
+    }
+
+    &_prev, &_next {
+      &:before{
+        font-size rem(12)
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+include ../blocks/doctype/doctype
+
+block variables
+  -
+    var pageTitle = pages.review.title, pageUrls = [pages.clients.url, pages.review.url];
+
+include ../blocks/header/header
+include ../blocks/content/content
+include ../blocks/footer/footer
+include ../blocks/pagination/pagination
+
++doctype(pageTitle)
+  .-wrapper
+    +header()
+    +content()
+      section.-section._review
+        header.__header
+          .-container-fluid
+            h1.-section.__title Отзывы клиентов
+        .-review-list
+          .-container-fluid
+            article.-review-item
+              +a().__img-wrap
+                img.__img.lazy(
+                data-src=`${paths.imgContent}/clients/2.jpg`
+                data-srcset=`${paths.imgContent}/clients/2.jpg 1x, ${paths.imgContent}/clients/2.jpg 2x, ${paths.imgContent}/clients/2.jpg 3x`
+                alt=''
+                )
+              .__content
+                header.__header
+                  h2.__title
+                    +a().__link Disney
+                  .__info Телеканал, #[+time() 16 декабря 2015]
+                .__text
+                  p.
+                    Настоящим письмом подтверждаю долговременное сотрудничество
+                    с ЗАО «Контракт-Регион». Подчеркиваем профессионализм сотрудников данной компании.
+                footer.__footer
+                  .__footer-col-1
+                    +a().__mail(data-fancybox='' data-type="iframe" data-src="Рекомендательное письмо Дисней.pdf" title='Открыть') Рекомендательное письмо
+                  .__footer-col-2
+                    p.__author Руководитель отдела, #[strong Пшекаевич Ю. А.]
+            article.-review-item
+              +a().__img-wrap
+                img.__img.lazy(
+                data-src=`${paths.imgContent}/clients/2.jpg`
+                data-srcset=`${paths.imgContent}/clients/2.jpg 1x, ${paths.imgContent}/clients/2.jpg 2x, ${paths.imgContent}/clients/2.jpg 3x`
+                alt=''
+                )
+              .__content
+                header.__header
+                  h2.__title
+                    +a().__link Интеза
+                  .__info Банк, #[+time() 16 декабря 2015]
+                .__text
+                  p.
+                    За время сотрудничества рекламное агентство «Контракт-Регион» зарекомендовало
+                    себя как профессиональный и надежный партнер в вопросах организации и проведения федеральных и региональных компаний на всей территории России.
+                footer.__footer
+                  .__footer-col-1
+                    +a().__mail(data-fancybox='' data-type="iframe" data-src="Рекомендательное письмо Дисней.pdf" title='Открыть') Рекомендательное письмо
+                  .__footer-col-2
+                    p.__author Директор Департамента внешних связей АО&nbsp;«Банк Интерза», #[strong Алиев Э. Ш.]
+        .-container-fluid
+          +pagination()
+    +footer()
