@@ -1,0 +1,199 @@
+include ../blocks/doctype/doctype
+
+block variables
+  -
+    var pageTitle = pages.partners.title, pageUrls = [pages.partners.url];
+
+include ../blocks/header/header
+include ../blocks/content/content
+include ../blocks/footer/footer
+
++doctype(pageTitle)
+  .-wrapper
+    +header()
+    +content()
+      section.-section._partners
+        header.__header
+          .-container-fluid
+            h1.-section.__title Партнёры
+        .-filters
+          .-container-fluid
+            +a().-filters.__item._current Все партнеры
+            +a().-filters.__item Телевидение
+            +a().-filters.__item Радио
+            +a().-filters.__item Наружная реклама
+            +a().-filters.__item Пресса
+            +a().-filters.__item Интернет
+        .-container-fluid
+          .-regions-list
+            .-row
+              article.-region-item
+                header.__header
+                  h2.__title Красноярск
+                  +a().__mail Письмо о сотрудничестве
+                .-partners-list
+                  +a().__item
+                    img.__item-img(
+                    src=`${paths.imgContent}/partners/sts.png`
+                    srcset=`${paths.imgContent}/partners/sts.png 1x, ${paths.imgContent}/partners/sts@2x.png 2x, ${paths.imgContent}/partners/sts@3x.png 3x`
+                    alt=''
+                    )
+                    h3.__item-title СТС
+              article.-region-item
+                header.__header
+                  h2.__title Тюмень
+                  +a().__mail Письмо о сотрудничестве
+                .-partners-list
+                  +a().__item
+                    img.__item-img(
+                    src=`${paths.imgContent}/partners/sts.png`
+                    srcset=`${paths.imgContent}/partners/sts.png 1x, ${paths.imgContent}/partners/sts@2x.png 2x, ${paths.imgContent}/partners/sts@3x.png 3x`
+                    alt=''
+                    )
+                    h3.__item-title СТС
+                  +a().__item
+                    img.__item-img(
+                    src=`${paths.imgContent}/partners/tnt.png`
+                    srcset=`${paths.imgContent}/partners/tnt.png 1x, ${paths.imgContent}/partners/tnt@2x.png 2x, ${paths.imgContent}/partners/tnt@3x.png 3x`
+                    alt=''
+                    )
+                    h3.__item-title ТНТ
+                  +a().__item
+                    img.__item-img(
+                    src=`${paths.imgContent}/partners/ren.png`
+                    srcset=`${paths.imgContent}/partners/ren.png 1x, ${paths.imgContent}/partners/ren@2x.png 2x, ${paths.imgContent}/partners/ren@3x.png 3x`
+                    alt=''
+                    )
+                    h3.__item-title РЕН ТВ
+                  +a().__item
+                    img.__item-img(
+                    src=`${paths.imgContent}/partners/dom.png`
+                    srcset=`${paths.imgContent}/partners/dom.png 1x, ${paths.imgContent}/partners/dom@2x.png 2x, ${paths.imgContent}/partners/dom@3x.png 3x`
+                    alt=''
+                    )
+                    h3.__item-title Домашний
+                  +a().__item
+                    img.__item-img(
+                    src=`${paths.imgContent}/partners/tb.png`
+                    srcset=`${paths.imgContent}/partners/tb.png 1x, ${paths.imgContent}/partners/tb@2x.png 2x, ${paths.imgContent}/partners/tb@3x.png 3x`
+                    alt=''
+                    )
+                    h3.__item-title Т+В
+              article.-region-item
+                header.__header
+                  h2.__title Воронеж
+                  +a().__mail Письмо о сотрудничестве
+                .-partners-list
+                  +a().__item
+                    img.__item-img(
+                    src=`${paths.imgContent}/partners/tnt.png`
+                    srcset=`${paths.imgContent}/partners/tnt.png 1x, ${paths.imgContent}/partners/tnt@2x.png 2x, ${paths.imgContent}/partners/tnt@3x.png 3x`
+                    alt=''
+                    )
+                    h3.__item-title ТНТ
+              article.-region-item
+                header.__header
+                  h2.__title Нижневартовск
+                  +a().__mail Письмо о сотрудничестве
+                .-partners-list
+                  +a().__item
+                    img.__item-img(
+                    src=`${paths.imgContent}/partners/sts.png`
+                    srcset=`${paths.imgContent}/partners/sts.png 1x, ${paths.imgContent}/partners/sts@2x.png 2x, ${paths.imgContent}/partners/sts@3x.png 3x`
+                    alt=''
+                    )
+                    h3.__item-title СТС
+                  +a().__item
+                    img.__item-img(
+                    src=`${paths.imgContent}/partners/tnt.png`
+                    srcset=`${paths.imgContent}/partners/tnt.png 1x, ${paths.imgContent}/partners/tnt@2x.png 2x, ${paths.imgContent}/partners/tnt@3x.png 3x`
+                    alt=''
+                    )
+                    h3.__item-title ТНТ
+              article.-region-item
+                header.__header
+                  h2.__title Тамбов
+                  +a().__mail Письмо о сотрудничестве
+                .-partners-list
+                  +a().__item
+                    img.__item-img(
+                    src=`${paths.imgContent}/partners/2017-07-22-15-03-47.png`
+                    srcset=`${paths.imgContent}/partners/2017-07-22-15-03-47.png 1x, ${paths.imgContent}/partners/2017-07-22-15-03-47@2x.png 2x, ${paths.imgContent}/partners/2017-07-22-15-03-47@3x.png 3x`
+                    alt=''
+                    )
+                    h3.__item-title Олимп
+                  +a().__item
+                    img.__item-img(
+                    src=`${paths.imgContent}/partners/vanya.png`
+                    srcset=`${paths.imgContent}/partners/vanya.png 1x, ${paths.imgContent}/partners/vanya@2x.png 2x, ${paths.imgContent}/partners/vanya@3x.png 3x`
+                    alt=''
+                    )
+                    h3.__item-title Радио Ваня
+                  +a().__item
+                    img.__item-img(
+                    src=`${paths.imgContent}/partners/dfm.png`
+                    srcset=`${paths.imgContent}/partners/dfm.png 1x, ${paths.imgContent}/partners/dfm@2x.png 2x, ${paths.imgContent}/partners/dfm@3x.png 3x`
+                    alt=''
+                    )
+                    h3.__item-title Радио DFM
+                  +a().__item
+                    img.__item-img(
+                    src=`${paths.imgContent}/partners/rr.png`
+                    srcset=`${paths.imgContent}/partners/rr.png 1x, ${paths.imgContent}/partners/rr@2x.png 2x, ${paths.imgContent}/partners/rr@3x.png 3x`
+                    alt=''
+                    )
+                    h3.__item-title Русское Радио
+                  +a().__item
+                    img.__item-img(
+                    src=`${paths.imgContent}/partners/dacha.png`
+                    srcset=`${paths.imgContent}/partners/dacha.png 1x, ${paths.imgContent}/partners/dacha@2x.png 2x, ${paths.imgContent}/partners/dacha@3x.png 3x`
+                    alt=''
+                    )
+                    h3.__item-title Радио Дача
+                  +a().__item
+                    img.__item-img(
+                    src=`${paths.imgContent}/partners/match.png`
+                    srcset=`${paths.imgContent}/partners/match.png 1x, ${paths.imgContent}/partners/match@2x.png 2x, ${paths.imgContent}/partners/match@3x.png 3x`
+                    alt=''
+                    )
+                    h3.__item-title Матч ТВ
+                  +a().__item
+                    img.__item-img(
+                    src=`${paths.imgContent}/partners/r24.png`
+                    srcset=`${paths.imgContent}/partners/r24.png 1x, ${paths.imgContent}/partners/r24@2x.png 2x, ${paths.imgContent}/partners/r24@3x.png 3x`
+                    alt=''
+                    )
+                    h3.__item-title Россия 24
+                  +a().__item
+                    img.__item-img(
+                    src=`${paths.imgContent}/partners/ka.png`
+                    srcset=`${paths.imgContent}/partners/ka.png 1x, ${paths.imgContent}/partners/ka@2x.png 2x, ${paths.imgContent}/partners/ka@3x.png 3x`
+                    alt=''
+                    )
+                    h3.__item-title Радио Карибу Арт
+                  +a().__item
+                    img.__item-img(
+                    src=`${paths.imgContent}/partners/tv3.png`
+                    srcset=`${paths.imgContent}/partners/tv3.png 1x, ${paths.imgContent}/partners/tv3@2x.png 2x, ${paths.imgContent}/partners/tv3@3x.png 3x`
+                    alt=''
+                    )
+                    h3.__item-title ТВ3
+                  +a().__item
+                    img.__item-img(
+                    src=`${paths.imgContent}/partners/sigma.png`
+                    srcset=`${paths.imgContent}/partners/sigma.png 1x, ${paths.imgContent}/partners/sigma@2x.png 2x, ${paths.imgContent}/partners/sigma@3x.png 3x`
+                    alt=''
+                    )
+                    h3.__item-title Сигма
+
+              // Spacers for border
+              .-region-item
+              .-region-item
+              .-region-item
+              .-region-item
+            .__info-text
+              p
+                strong более 3000
+                | партнеров по&nbsp;всей России
+
+    +footer()

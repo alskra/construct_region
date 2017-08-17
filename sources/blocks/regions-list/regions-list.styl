@@ -1,0 +1,45 @@
+.regions-list {
+  overflow hidden
+  position relative
+  .row {
+    margin-left rem(-49)
+    margin-right rem(-50)
+  }
+
+  &__info-text {
+    font-size rem(20)
+    font-weight bold
+    line-height 1em
+    text-align left
+    color #dcdcdc
+    max-width 100%
+    pointer-events none
+    position absolute
+    bottom rem(77)
+    left 50%
+    transform translate(-50%, 0)
+
+    p {
+      &:last-child {
+        margin 0
+      }
+    }
+    strong {
+      display block
+      font-size rem(55)
+      font-weight bold
+      line-height 1.05em
+      letter-spacing rem(-0.4)
+      color rgba(#000000, 0.12)
+    }
+  }
+
+  @media (min-width $screen-sm-min) {
+    &__info-text {
+      font-size rem(28)
+      strong {
+        font-size rem(100)
+      }
+    }
+  }
+}
