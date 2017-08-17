@@ -16,6 +16,14 @@ include ../blocks/footer/footer
         header.__header
           .-container-fluid
             h1.-section.__title Клиенты
+        .-filters
+          .-container-fluid
+            +a().-filters.__item._current Все клиенты
+            +a().-filters.__item СМИ
+            +a().-filters.__item Финансы
+            +a().-filters.__item Магазины
+            +a().-filters.__item Другие направления
+
         .-clients-list
           .-container-fluid
             .-row
@@ -23,7 +31,7 @@ include ../blocks/footer/footer
                 +a().__img-wrap
                   img.__img.lazy(
                   data-src=`${paths.imgContent}/clients/2.jpg`
-                  data-srcset=`${paths.imgContent}/clients/2.jpg 1x, ${paths.imgContent}/service/2.jpg 2x, ${paths.imgContent}/service/2.jpg 3x`
+                  data-srcset=`${paths.imgContent}/clients/2.jpg 1x, ${paths.imgContent}/clients/2.jpg 2x, ${paths.imgContent}/clients/2.jpg 3x`
                   alt=''
                   )
                 h2.__title
@@ -33,7 +41,7 @@ include ../blocks/footer/footer
                 +a().__img-wrap
                   img.__img.lazy(
                   data-src=`${paths.imgContent}/clients/1.jpg`
-                  data-srcset=`${paths.imgContent}/clients/1.jpg 1x, ${paths.imgContent}/service/1.jpg 2x, ${paths.imgContent}/service/1.jpg 3x`
+                  data-srcset=`${paths.imgContent}/clients/1.jpg 1x, ${paths.imgContent}/clients/1.jpg 2x, ${paths.imgContent}/clients/1.jpg 3x`
                   alt=''
                   )
                 h2.__title
@@ -43,7 +51,7 @@ include ../blocks/footer/footer
                 +a().__img-wrap
                   img.__img.lazy(
                   data-src=`${paths.imgContent}/clients/3.jpg`
-                  data-srcset=`${paths.imgContent}/clients/3.jpg 1x, ${paths.imgContent}/service/3.jpg 2x, ${paths.imgContent}/service/3.jpg 3x`
+                  data-srcset=`${paths.imgContent}/clients/3.jpg 1x, ${paths.imgContent}/clients/3.jpg 2x, ${paths.imgContent}/clients/3.jpg 3x`
                   alt=''
                   )
                 h2.__title
@@ -53,7 +61,7 @@ include ../blocks/footer/footer
                 +a().__img-wrap
                   img.__img.lazy(
                   data-src=`${paths.imgContent}/clients/4.jpg`
-                  data-srcset=`${paths.imgContent}/clients/4.jpg 1x, ${paths.imgContent}/service/4.jpg 2x, ${paths.imgContent}/service/4.jpg 3x`
+                  data-srcset=`${paths.imgContent}/clients/4.jpg 1x, ${paths.imgContent}/clients/4.jpg 2x, ${paths.imgContent}/clients/4.jpg 3x`
                   alt=''
                   )
                 h2.__title
@@ -63,7 +71,7 @@ include ../blocks/footer/footer
                 +a().__img-wrap
                   img.__img.lazy(
                   data-src=`${paths.imgContent}/clients/5.jpg`
-                  data-srcset=`${paths.imgContent}/clients/5.jpg 1x, ${paths.imgContent}/service/5.jpg 2x, ${paths.imgContent}/service/5.jpg 3x`
+                  data-srcset=`${paths.imgContent}/clients/5.jpg 1x, ${paths.imgContent}/clients/5.jpg 2x, ${paths.imgContent}/clients/5.jpg 3x`
                   alt=''
                   )
                 h2.__title
@@ -73,7 +81,7 @@ include ../blocks/footer/footer
                 +a().__img-wrap
                   img.__img.lazy(
                   data-src=`${paths.imgContent}/clients/6.jpg`
-                  data-srcset=`${paths.imgContent}/clients/6.jpg 1x, ${paths.imgContent}/service/6.jpg 2x, ${paths.imgContent}/service/6.jpg 3x`
+                  data-srcset=`${paths.imgContent}/clients/6.jpg 1x, ${paths.imgContent}/clients/6.jpg 2x, ${paths.imgContent}/clients/6.jpg 3x`
                   alt=''
                   )
                 h2.__title
@@ -83,7 +91,7 @@ include ../blocks/footer/footer
                 +a().__img-wrap
                   img.__img.lazy(
                   data-src=`${paths.imgContent}/clients/7.jpg`
-                  data-srcset=`${paths.imgContent}/clients/7.jpg 1x, ${paths.imgContent}/service/7.jpg 2x, ${paths.imgContent}/service/7.jpg 3x`
+                  data-srcset=`${paths.imgContent}/clients/7.jpg 1x, ${paths.imgContent}/clients/7.jpg 2x, ${paths.imgContent}/clients/7.jpg 3x`
                   alt=''
                   )
                 h2.__title

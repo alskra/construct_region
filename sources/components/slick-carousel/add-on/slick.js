@@ -1457,8 +1457,8 @@
             $('img[data-lazy], img[data-lazy-srcset]', imagesScope).each(function() {
 
                 var image = $(this),
-                    imageSourceSet = $(this).attr('data-lazy-srcset'),
                     imageSource = $(this).attr('data-lazy'),
+                    imageSourceSet = $(this).attr('data-lazy-srcset'),
                     imageToLoad = document.createElement('img');
 
                 imageToLoad.onload = function() {
@@ -1467,8 +1467,8 @@
                         .animate({ opacity: 0 }, 100, function() {
                             image
                                 .removeClass('slick-loading')
-                                .attr('srcset', imageSourceSet)
                                 .attr('src', imageSource)
+                                .attr('srcset', imageSourceSet)
                                 .animate({ opacity: 1 }, 200, function() {
                                     image
                                         .removeAttr('data-lazy-srcset')
@@ -1491,8 +1491,8 @@
 
                 };
 
-                imageSourceSet ? imageToLoad.srcset = imageSourceSet : null;
                 imageToLoad.src = imageSource;
+                imageSourceSet ? imageToLoad.srcset = imageSourceSet : null;
 
             });
 
