@@ -1,0 +1,23 @@
+include ../blocks/doctype/doctype
+
+block variables
+  -
+    var pageTitle = pages.err404.title, pageUrls = [pages.err404.url];
+
+include ../blocks/header/header
+include ../blocks/content/content
+include ../blocks/footer/footer
+
++doctype(pageTitle)._error
+  .-wrapper
+    +header()
+    +content()
+      .-container-fluid
+        .-page.__v-center
+          h1.-page.__title 404
+          p.-page.__lead Страница не найдена
+          +a('/').-page.__btn-to-home.btn.btn_3
+            span.btn__label Главная страница
+
+    +footer()
+

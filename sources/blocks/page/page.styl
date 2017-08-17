@@ -144,12 +144,74 @@
     }
   }
 
+  &_error {
+    .content {
+      color white
+      display flex
+      //min-height rem(600)
+      background url("err-bg.jpg") no-repeat 50% 50%/cover
+      > .container-fluid {
+        display flex
+        flex-flow column
+        justify-content center
+        flex none
+        width 100%
+        padding-top rem(30)
+        padding-bottom rem(100)
+        position relative
+      }
+
+      @media $media-retina-2 {
+        background-image url("err-bg@2x.jpg")
+      }
+
+      @media $media-retina-3 {
+        background-image url("err-bg@3x.jpg")
+      }
+    }
+
+    & {r}__title {
+      font-size rem(100)
+      font-weight 300
+      line-height 0.88
+      letter-spacing rem(6)
+      color #ffffff
+      margin 0 0 (21/160)em
+    }
+
+    & {r}__lead {
+      font-size rem(28)
+      font-weight 300
+      line-height 1.65
+    }
+
+    & {r}__v-center {
+
+    }
+
+    & {r}__btn-to-home {
+      position absolute
+      bottom 0
+    }
+  }
+
   @media (min-width $screen-md-min) {
-    &_index {
+    &_index, &_error {
       .header {
         background none
         border-color rgba(#e6e6e6, 0.15)
         position absolute
+        .btn_1 {
+          color white
+          border-color #e6e6e6
+          &:hover,
+          &:focus,
+          &.focus {
+            color white
+            background $red-1
+            border-color $red-1
+          }
+        }
         &__logo {
           &:before {
             content url('logo-white.svg')
@@ -170,18 +232,22 @@
           }
         }
       }
-      .btn_1 {
-        color white
-        border-color #e6e6e6
-        &:hover,
-        &:focus,
-        &.focus {
-          color white
-          background $red-1
-          border-color $red-1
-        }
-      }
     }
 
+    &_error {
+      .content {
+        > .container-fluid {
+          padding-top rem(114)
+        }
+      }
+
+      & {r}__title {
+        font-size rem(160)
+      }
+
+      & {r}__lead {
+        font-size rem(34)
+      }
+    }
   }
 }
