@@ -16,10 +16,112 @@ include ../blocks/footer/footer
         header.__header
           .-container-fluid
             h1.-section.__title Наша команда
-        .-team-list
-          .-container-fluid
-            .-row
-              .-col-xs-12.col-sm-6.col-md-3
-                article.-team-list.__item
+            p.-section.__header-lead #[strong #[em 76]]&nbsp;сотрудника
+        .-teambox
+          .-team-list
+            .-container-fluid
+              .-row
+                .-col-xs-12.col-sm-6.col-md-3
+                  article.-team-item
+                    +a().__inner(title='Евгений Бажанов')
+                      .__img-wrap
+                        .__img-resp
+                          img.__img(
+                          src=`${paths.imgContent}/team/eb.jpg`
+                          srcset=`${paths.imgContent}/team/eb.jpg 1x, ${paths.imgContent}/team/eb@2x.jpg 2x, ${paths.imgContent}/team/eb@3x.jpg 3x`
+                          data-object-fit='cover' onload='objectFit(this)'
+                          alt=''
+                          )
+                      h2.__title Евгений Бажанов
+                      p.__position Менеджер
+                    .__content
+                      p.
+                        Дата последнего изменения — 01 августа 2017
+                      p.
+                        Настоящая политика конфиденци-альности персональных данных (Далее - Политика) действует
+                        в отношении всей информации, которую Администрация Интернет-сайта (далее - Сайт), расположен-ного на домене - (#[+a('/') ссылка на сайт]), может получить от Пользователя во время использования Сайта, а также в ходе исполнения Администрацией сайта любых соглашений и договоров с Пользователем.
+                .-col-xs-12.col-sm-6.col-md-3
+                  article.-team-item
+                    +a().__inner(title='Борис Козловский')
+                      .__img-wrap
+                        .__img-resp
+                          img.__img(
+                          src=`${paths.imgContent}/team/bk.jpg`
+                          srcset=`${paths.imgContent}/team/bk.jpg 1x, ${paths.imgContent}/team/bk@2x.jpg 2x, ${paths.imgContent}/team/bk@3x.jpg 3x`
+                          data-object-fit='cover' onload='objectFit(this)'
+                          alt=''
+                          )
+                      h2.__title Борис Козловский
+                      p.__position Маркетолог
+                    .__content
+                      p.
+                        Ortum velox ducunt ad germanus elevatus
+                .-col-xs-12.col-sm-6.col-md-3
+                  article.-team-item
+                    +a().__inner(title='Татьяна Яковлева')
+                      .__img-wrap
+                        .__img-resp
+                          img.__img(
+                          src=`${paths.imgContent}/team/ty.jpg`
+                          srcset=`${paths.imgContent}/team/ty.jpg 1x, ${paths.imgContent}/team/ty@2x.jpg 2x, ${paths.imgContent}/team/ty@3x.jpg 3x`
+                          data-object-fit='cover' onload='objectFit(this)'
+                          alt=''
+                          )
+                      h2.__title Татьяна Яковлева
+                      p.__position Маркетолог
+                    .__content
+                      p.
+                        Coordinataes sunt fiscinas de festus cannabis
+                .-col-xs-12.col-sm-6.col-md-3
+                  article.-team-item
+                    +a().__inner(title='Станислав Вронский')
+                      .__img-wrap
+                        .__img-resp
+                          img.__img(
+                          src=`${paths.imgContent}/team/sv.jpg`
+                          srcset=`${paths.imgContent}/team/sv.jpg 1x, ${paths.imgContent}/team/sv@2x.jpg 2x, ${paths.imgContent}/team/sv@3x.jpg 3x`
+                          data-object-fit='cover' onload='objectFit(this)'
+                          alt=''
+                          )
+                      h2.__title Станислав Вронский
+                      p.__position Менеджер
+                    .__content
+                      p.
+                        Cadunt diligenter ducunt ad regius castor
+                .-col-xs-12.col-sm-6.col-md-3
+                  article.-team-item
+                    +a().__inner(title='Светлана Гумелева')
+                      .__img-wrap
+                        .__img-resp
+                          img.__img(
+                          src=`${paths.imgContent}/team/sg.jpg`
+                          srcset=`${paths.imgContent}/team/sg.jpg 1x, ${paths.imgContent}/team/sg@2x.jpg 2x, ${paths.imgContent}/team/sg@3x.jpg 3x`
+                          data-object-fit='cover' onload='objectFit(this)'
+                          alt=''
+                          )
+                      h2.__title Светлана Гумелева
+                      p.__position Руководитель отдела
+                    .__content
+                      p.
+                        Nocere aegre ducunt ad domesticus mortem
+                .-col-xs-12.col-sm-6.col-md-3
+                  article.-team-item
+                    +a().__inner(title='Светлана Гумелева')
+                      .__img-wrap
+                        .__img-resp._size
+                      h2.__title Sample
+                      p.__position Sample
+                    .__content
+                      p.
+                        Sample
+
+          .-team-view
+            button.__btn-close.btn.glyphicon.glyphicon-cancel(type='button' data-toggle='close-team-view' title='Закрыть')
+            header.__header
+              .__img-wrap
+                .__img-resp
+              h2.__title
+              p.__position
+            .__content
 
     +footer()

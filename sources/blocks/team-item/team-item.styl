@@ -1,0 +1,84 @@
+.team-item {
+  text-align center
+  p {
+    &:last-child {
+      margin 0
+    }
+  }
+
+  &__inner {
+    display block
+    padding rem(42) rem(15)
+    &, &:hover, &:focus {
+      color inherit
+      text-decoration none
+    }
+    &:hover, &:focus {
+      background-color #f8f8f8
+      & {r}__title {
+        color $red-1
+      }
+    }
+  }
+
+  &__img-wrap {
+    max-width rem(168)
+    border-radius 50%
+    margin 0 auto rem(21)
+  }
+
+  &__img-resp {
+    color white
+    padding-top 100%
+    //background #30303a
+    border-radius inherit
+    position relative
+    &:empty {
+      background inline-svg('logo-white.svg') no-repeat 50% 50%/80% auto #30303a
+    }
+    &_size {
+      &:empty {
+        background #30303a
+      }
+      &:before {
+        content 'IMG 633x633'
+        border-radius inherit
+        display flex
+        justify-content center
+        align-items center
+        position absolute
+        top 0
+        right 0
+        bottom 0
+        left 0
+      }
+    }
+  }
+
+  &__img {
+    border-radius inherit
+    position absolute
+    top 0
+    left 0
+  }
+
+  &__title {
+    font-size rem(18)
+    font-weight bold
+    line-height 1.56em
+    text-overflow(ellipsis)
+    transition $transition-base
+    margin 0
+  }
+
+  &__position {
+    color #b8b9bb
+    font-size rem(14)
+    line-height 2em
+    text-overflow(ellipsis)
+  }
+
+  &__content {
+    display none
+  }
+}

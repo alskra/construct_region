@@ -1,0 +1,64 @@
+include ../blocks/doctype/doctype
+
+block variables
+  -
+    var pageTitle = pages.sitemap.title, pageUrls = [pages.sitemap.url, pages.sitemap.url];
+
+include ../blocks/header/header
+include ../blocks/content/content
+include ../blocks/footer/footer
+
++doctype(pageTitle)
+  .-wrapper
+    +header()
+    +content()
+      section.-section._sitemap
+        header.__header
+          .-container-fluid
+            h1.-section.__title Карта сайта
+        .-container-fluid
+          .-row
+            .-col-xs-12.col-md-9
+              .-row
+                .-col-xs-12.col-sm-6.col-md-3
+                  ul.-sitemap-item
+                    li
+                     +a() О компании
+                    ul
+                      li
+                        +a() Команда
+                      li
+                        +a() История
+                .-col-xs-12.col-sm-6.col-md-3
+                  ul.-sitemap-item
+                    li
+                      +a() Услуги
+                    ul
+                      li
+                        +a() Телевидение
+                      li
+                        +a() Радио
+                      li
+                        +a() Наружная реклама
+                      li
+                        +a() Пресса
+                      li
+                        +a() Интернет
+                .-col-xs-12.col-sm-6.col-md-3
+                  ul.-sitemap-item
+                    li
+                      +a() Клиенты
+                    ul
+                      li
+                        +a() Отзывы клиентов
+                    li
+                      +a() Партнеры
+                .-col-xs-12.col-sm-6.col-md-3
+                  ul.-sitemap-item
+                    li
+                      +a() Контакты
+                    ul
+                      li
+                        +a() Написать нам
+
+    +footer()

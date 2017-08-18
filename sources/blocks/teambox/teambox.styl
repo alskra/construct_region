@@ -1,0 +1,31 @@
+.teambox {
+  display flex
+  .team-list {
+    overflow hidden
+    width 100%
+  }
+
+  &_opened {
+    .team-list {
+      border-right 1px solid #e6e6e6
+    }
+    .team-item {
+      &__title, &__position {
+        display none
+      }
+    }
+    .team-view {
+      margin-left 0 !important
+    }
+  }
+
+  @media (min-width em-root(600)) {
+    &_opened {
+      .team-item {
+        &__title, &__position {
+          display block
+        }
+      }
+    }
+  }
+}

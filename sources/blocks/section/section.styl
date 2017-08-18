@@ -56,6 +56,7 @@
 
   &_about {
     & {r}__header {
+      color #ffffff
       background url("bg-about.jpg") no-repeat 50% 0/cover
       margin 0 0 rem(35)
 
@@ -103,6 +104,7 @@
 
   &_service-view {
     & {r}__header {
+      color #ffffff
       background-color #30303a
       position relative
       margin 0 0 rem(35)
@@ -114,7 +116,7 @@
 
     & {r}__header-bg {
       content ''
-      background none no-repeat 50% 50%/cover
+      background none no-repeat 50% 0/cover
       opacity 0.4
       pointer-events none
       position absolute
@@ -126,6 +128,39 @@
 
     & {r}__title {
       color #ffffff
+    }
+  }
+
+  &_team {
+    & {r}__header {
+      color #ffffff
+      font-size rem(14)
+      background url("osman-rana-263702.jpg") no-repeat 50% 0/cover
+      p {
+        &:last-child {
+          margin-bottom 0
+        }
+      }
+
+      @media $media-retina-2 {
+        background-image url("osman-rana-263702@2x.jpg")
+      }
+
+      @media $media-retina-3 {
+        background-image url("osman-rana-263702@3x.jpg")
+      }
+    }
+
+    & {r}__title {
+      color #ffffff
+      margin rem(10) 0 rem(9)
+    }
+  }
+
+  &_sitemap {
+    padding-bottom rem(80)
+    & {r}__header {
+      padding-bottom rem(42)
     }
   }
 

@@ -33,7 +33,7 @@
 // fancybox
 .fancybox-bg {
   background #000000
-  .fancybox-is-open &{
+  .fancybox-is-open & {
     opacity 0.6
   }
 }
@@ -58,6 +58,11 @@
     visibility visible
     transition opacity .25s, visibility 0s
   }
+}
+
+.fancybox-loading {
+  border 6px solid $red-1
+  border-top 6px solid rgba(255, 255, 255, 0)
 }
 
 // slideout
