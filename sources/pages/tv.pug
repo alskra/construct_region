@@ -1,0 +1,133 @@
+include ../blocks/doctype/doctype
+
+block variables
+  -
+    var pageTitle = pages.service.title, pageUrls = [pages.service.url, pages.tv.url];
+
+include ../blocks/header/header
+include ../blocks/content/content
+include ../blocks/footer/footer
+include ../blocks/checkbox/checkbox
+
++doctype(pageTitle)
+  .-wrapper
+    +header()
+    +content()
+      section.-section._service-view
+        header.__header
+          .__header-bg(style='background-image: url("static/img/content/service/bg-tv.jpg")')
+          .-container-fluid
+            h1.-section.__title Телевидение
+        .-container-fluid
+          .-row
+            .-section.__col-1.col-xs-12.col-md-7
+              .content-block
+                p.
+                  Размещение рекламы на телевидении пользуется большим спросом
+                  и часто используется для информирования о продуктах и услугах. Хотите избежать лишних затрат и получить отличный результат?
+                p.
+                  Наши специалисты готовы предложить вам оптимальные варианты размещения на федеральных и региональных каналах с максимальной выгодой для вас. "Констракт-регион" больше 20 лет занимается телевизионной рекламой. Колоссальный опыт позволяет нам решать задачи по размещению любой сложности.
+              section.-partners-list
+                h2.__title Партнёры
+                .__columns
+                  +a().__item
+                    img.__item-img(
+                    src=`${paths.imgContent}/partners/2017-07-22-15-03-47.png`
+                    srcset=`${paths.imgContent}/partners/2017-07-22-15-03-47.png 1x, ${paths.imgContent}/partners/2017-07-22-15-03-47@2x.png 2x, ${paths.imgContent}/partners/2017-07-22-15-03-47@3x.png 3x`
+                    alt=''
+                    )
+                    h3.__item-title Олимп
+                  +a().__item
+                    img.__item-img(
+                    src=`${paths.imgContent}/partners/vanya.png`
+                    srcset=`${paths.imgContent}/partners/vanya.png 1x, ${paths.imgContent}/partners/vanya@2x.png 2x, ${paths.imgContent}/partners/vanya@3x.png 3x`
+                    alt=''
+                    )
+                    h3.__item-title Радио Ваня
+                  +a().__item
+                    img.__item-img(
+                    src=`${paths.imgContent}/partners/dfm.png`
+                    srcset=`${paths.imgContent}/partners/dfm.png 1x, ${paths.imgContent}/partners/dfm@2x.png 2x, ${paths.imgContent}/partners/dfm@3x.png 3x`
+                    alt=''
+                    )
+                    h3.__item-title Радио DFM
+                  +a().__item
+                    img.__item-img(
+                    src=`${paths.imgContent}/partners/rr.png`
+                    srcset=`${paths.imgContent}/partners/rr.png 1x, ${paths.imgContent}/partners/rr@2x.png 2x, ${paths.imgContent}/partners/rr@3x.png 3x`
+                    alt=''
+                    )
+                    h3.__item-title Русское Радио
+                  +a().__item
+                    img.__item-img(
+                    src=`${paths.imgContent}/partners/dacha.png`
+                    srcset=`${paths.imgContent}/partners/dacha.png 1x, ${paths.imgContent}/partners/dacha@2x.png 2x, ${paths.imgContent}/partners/dacha@3x.png 3x`
+                    alt=''
+                    )
+                    h3.__item-title Радио Дача
+              hr
+              .-docs
+                +a().__item._pdf
+                  .__icon
+                  .__title Презентация
+                  .__info ЗАО «Констракт-Регион», 1.5 Мб
+            .-section.__col-2.col-xs-12.col-md-5
+              section.-section.__about-info
+                .__about-info-content
+                  h2.__about-info-title Реклама на региональном ТВ с «Констракт-Регион»:
+                  ul
+                    li Разработка стратегии и тактики рекламной кампании
+                    li Выбор каналов под вашу целевую аудиторию и бюджет
+                    li Множество вариантов нестандартного размещения
+                    li Предварительная оценка эффективности кампании
+                    li Выгодные условия по баингу
+                    li Качественный контроль и строгая отчетность
+
+      // Section Clients
+      section.-section-clients._gray
+        .-container-fluid
+          h2.-section-clients.__title Наши клиенты
+        .-review-list._margin-left
+          .-container-fluid
+            article.-review-item
+              +a().__img-wrap
+                img.__img.lazy(
+                data-src=`${paths.imgContent}/clients/2.jpg`
+                data-srcset=`${paths.imgContent}/clients/2.jpg 1x, ${paths.imgContent}/clients/2.jpg 2x, ${paths.imgContent}/clients/2.jpg 3x`
+                alt=''
+                )
+              .__content
+                header.__header
+                  h2.__title
+                    +a().__link Disney
+                  .__info Телеканал, #[+time() 16 декабря 2015]
+                .__text
+                  p.
+                    Настоящим письмом подтверждаю долговременное сотрудничество
+                    с ЗАО «Контракт-Регион». Подчеркиваем профессионализм сотрудников данной компании.
+                footer.__footer
+                  .__footer-col-1
+                    +a().__mail(data-fancybox='' data-type="iframe" data-src="Рекомендательное письмо Дисней.pdf" title='Открыть') Рекомендательное письмо
+                  .__footer-col-2
+                    p.__author Руководитель отдела, #[strong Пшекаевич Ю. А.]
+      // Section Feedback
+      section.-section-feedback
+        .-container-fluid
+          h2.-section-feedback.__title Появились вопросы? Напишите нам
+          form.-form-feedback(action='' method='get' data-parsley-validate="")
+            .-form-row._sm_2
+              label.-form-label
+                input.-text-field(type="text" name="name" required)
+                span.__text Ваше имя
+              label.-form-label
+                input.-text-field(type="email" name="email" required)
+                span.__text Email
+            .-form-row
+              label.-form-label
+                textarea.-text-field._textarea(name="msg" required)
+                span.__text Сообщение
+            .-form-row._last
+              .__agreement
+                +checkbox(name='agreement' required) Я&nbsp;ознакомлен с&nbsp;#[+a(pages.confidentiality.url)(target='_blank') политикой конфиденциальности] #[br]и&nbsp;даю #[+a()(target='_blank') согласие на&nbsp;обработку своих персональных данных].
+              button.__btn-submit.btn.btn_4(type='submit' data-toggle='submit') Отправить
+    +footer()

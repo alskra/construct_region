@@ -10,6 +10,10 @@
     margin rem(19) 0 rem(21)
   }
 
+  &__col-1 {
+    margin 0 0 rem(60)
+  }
+
   &__about-info {
     margin 0 0 rem(60)
   }
@@ -97,6 +101,34 @@
     }
   }
 
+  &_service-view {
+    & {r}__header {
+      background-color #30303a
+      position relative
+      margin 0 0 rem(35)
+      .container-fluid {
+        position relative
+        z-index 1
+      }
+    }
+
+    & {r}__header-bg {
+      content ''
+      background none no-repeat 50% 50%/cover
+      opacity 0.4
+      pointer-events none
+      position absolute
+      top 0
+      right 0
+      bottom 0
+      left 0
+    }
+
+    & {r}__title {
+      color #ffffff
+    }
+  }
+
   @media (min-width $screen-sm-min) {
     &__title {
 
@@ -125,6 +157,12 @@
     }
 
     &_about {
+      & {r}__header {
+        margin 0 0 rem(75)
+      }
+    }
+
+    &_service-view {
       & {r}__header {
         margin 0 0 rem(75)
       }

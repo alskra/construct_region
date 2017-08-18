@@ -4,6 +4,7 @@
     align-items flex-start
     color inherit
     text-decoration none
+    page-break-inside avoid
     margin 0 0 rem(7)
     &:hover, &:focus {
       color inherit
@@ -30,5 +31,12 @@
     color $black-1
     transition inherit
     margin rem(14) 0 0
+  }
+
+  @media (min-width $screen-sm-min) {
+    &__columns {
+      column-count 2
+      column-gap rem(30)
+    }
   }
 }
