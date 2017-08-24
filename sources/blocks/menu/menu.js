@@ -27,6 +27,6 @@ $(function () {
     $(window).on('resize.Submenu', function () {
         $('.menu__submenu .container-fluid').css('padding-left', $('.header__top').width()
             - $('.header__panel').width()
-            + parseInt($('.menu__item').css('padding-left')) + parseInt($('.header__top').css('padding-left')));
+            + parseInt($('.menu__item_lvl_1').css('padding-left')) + parseInt($('.header__top').css('padding-left')) - parseInt($('.menu__btn_lvl_2').css('padding-left')));
     }).triggerHandler('resize.Submenu');
 });
