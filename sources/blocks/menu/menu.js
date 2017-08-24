@@ -23,4 +23,10 @@ $(function () {
         clearTimeout(timerHoverMenuItem);
         $menuItem.children('.menu__submenu').removeClass('menu__submenu_opened').slideUp(200).parent().removeClass('menu__item_opened');
     });
+
+    $(window).on('resize.Submenu', function () {
+        $('.menu__submenu .container-fluid').css('padding-left', $('.header__top').width()
+            - $('.header__panel').width()
+            + parseInt($('.menu__item').css('padding-left')) + parseInt($('.header__top').css('padding-left')));
+    }).triggerHandler('resize.Submenu');
 });
